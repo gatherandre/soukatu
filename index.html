@@ -6,7 +6,6 @@
   <title>KATU — Banco Digital</title>
   <meta name="description" content="KATU Empresa e KATU Você — banco digital com atendimento humanizado, ágil, simples e transparente." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +43,17 @@
       overflow-x: hidden;
     }
 
+    /* Correção para imagens ausentes (placeholder) */
+    img {
+      background: rgba(0,0,0,0.05);
+      color: var(--muted);
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
     /* =========
        Fundo premium (leve, moderno)
     ========= */
@@ -74,9 +84,8 @@
     }
 
     /* =========
-       Marca d’água (DESABILITADA)
-       Motivo: o data-URI multi-linha quebrava o parser do CSS em alguns browsers/caches.
-       Se quiser reativar depois, eu te mando a versão URL-encoded segura.
+       “Folhas” como marca d’água (SVG corrigido)
+       O código SVG foi compactado para evitar erros de parser do CSS
     ========= */
     .leaf{
       position: fixed;
@@ -86,14 +95,16 @@
       pointer-events:none;
       z-index: -1;
       opacity: .10;
-      background: none;
+      filter: blur(.0px);
       background-repeat: no-repeat;
       background-size: contain;
+      /* SVG URL-encoded para garantir compatibilidade */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700' viewBox='0 0 700 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231A3C34' stop-opacity='0.75'/%3E%3Cstop offset='0.55' stop-color='%23D4AF37' stop-opacity='0.55'/%3E%3Cstop offset='1' stop-color='%23C75B42' stop-opacity='0.55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M470 95c-96 24-170 92-208 165-45 86-46 171-6 252 46 94 141 161 262 144 55-8 106-34 144-73 42-42 68-98 75-160 13-112-48-246-267-328z' fill='none' stroke='url(%23g)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' opacity='0.85'/%3E%3Cpath d='M210 575c38-104 120-195 235-257 70-38 142-58 214-63' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.35'/%3E%3Cpath d='M260 520c28-66 78-128 146-176 43-30 90-52 142-65' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.22'/%3E%3Cpath d='M320 465c19-44 52-86 96-118 28-20 60-35 97-45' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.16'/%3E%3C/svg%3E");
       transform: rotate(0deg);
     }
-    .leaf.right{ top: 90px; right: -240px; transform: rotate(14deg); opacity:.09; display:none; }
-    .leaf.left{ bottom: -260px; left: -250px; transform: rotate(-18deg); opacity:.08; display:none; }
-    .leaf.center{ top: 46%; left: 26%; transform: rotate(22deg); opacity:.06; display:none; }
+    .leaf.right{ top: 90px; right: -240px; transform: rotate(14deg); opacity:.09; }
+    .leaf.left{ bottom: -260px; left: -250px; transform: rotate(-18deg); opacity:.08; }
+    .leaf.center{ top: 46%; left: 26%; transform: rotate(22deg); opacity:.06; }
 
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
@@ -107,6 +118,7 @@
       z-index: 50;
       background: rgba(242,232,220,.72);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
     .nav{
@@ -126,7 +138,7 @@
       background: rgba(255,255,255,.25);
       box-shadow: 0 10px 26px rgba(0,0,0,.04);
     }
-    .brand img{ height: 32px; width:auto; display:block; }
+    .brand img{ height: 32px; width:32px; object-fit: contain; display:block; }
     .brand strong{
       font-family: Manrope, Inter, sans-serif;
       font-weight: 800;
@@ -152,6 +164,7 @@
       transition: transform .08s ease, background .12s ease, box-shadow .12s ease;
       user-select:none;
       white-space: nowrap;
+      cursor: pointer;
     }
     .tab:hover{
       background: rgba(26,60,52,.08);
@@ -274,6 +287,7 @@
       align-items:center;
       flex-wrap: wrap;
       margin-top: 16px;
+      scroll-margin-top: 100px; /* Correção do scroll */
     }
     .badge{
       display:inline-flex;
@@ -349,7 +363,10 @@
     }
 
     /* Sections */
-    section{ padding: 18px 0; }
+    section{
+      padding: 18px 0;
+      scroll-margin-top: 90px; /* Correção para o menu fixo não cobrir o título */
+    }
     .sectionTitle{
       font-family: Manrope, Inter, sans-serif;
       font-weight: 800;
@@ -377,6 +394,7 @@
       padding: 18px;
       box-shadow: var(--shadowSoft);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       transition: transform .10s ease, box-shadow .14s ease;
     }
     .card:hover{
@@ -425,6 +443,7 @@
       box-shadow: var(--shadowSoft);
       overflow:hidden;
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
     .media img{
       width:100%;
@@ -432,6 +451,7 @@
       display:block;
       border-radius: 16px;
       border: 1px solid rgba(26,60,52,.10);
+      min-height: 200px; /* Altura mínima se a imagem não carregar */
     }
 
     /* Footer */
@@ -488,7 +508,7 @@
     <div class="wrap">
       <div class="nav">
         <a class="brand" href="#katu-empresa" data-page="katu-empresa" aria-label="KATU">
-          <img src="assets/logo.png" alt="KATU logo" />
+          <img src="assets/logo.png" alt="KATU logo" style="background:var(--forest); border-radius:50%;" />
           <strong>KATU</strong>
         </a>
 
@@ -508,9 +528,6 @@
   </header>
 
   <main class="wrap">
-    <!-- =========================
-         HOME — KATU EMPRESA
-    ========================== -->
     <div class="page is-active" id="page-katu-empresa" data-page="katu-empresa">
       <div class="heroGrid">
         <div>
@@ -612,9 +629,6 @@
       </section>
     </div>
 
-    <!-- =========================
-         HOME — KATU VOCÊ
-    ========================== -->
     <div class="page" id="page-katu-voce" data-page="katu-voce">
       <div class="heroGrid">
         <div>
@@ -696,9 +710,6 @@
       </section>
     </div>
 
-    <!-- =========================
-         PLANOS (mock)
-    ========================== -->
     <div class="page" id="page-planos" data-page="planos">
       <section>
         <div class="tag">Planos • simples de entender</div>
@@ -767,9 +778,6 @@
       </section>
     </div>
 
-    <!-- =========================
-         CRÉDITO (mock)
-    ========================== -->
     <div class="page" id="page-credito" data-page="credito">
       <section>
         <div class="tag">Crédito • sem mistério</div>
@@ -839,55 +847,67 @@
   </main>
 
   <script>
-    // ano
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", () => {
+        // ano
+        const yEl = document.getElementById("y");
+        if(yEl) yEl.textContent = new Date().getFullYear();
 
-    // pages
-    const pages = Array.from(document.querySelectorAll(".page"));
-    const tabs = Array.from(document.querySelectorAll(".tab[data-page]"));
-    const pageLinks = Array.from(document.querySelectorAll("[data-page]:not(.tab)"));
+        // pages
+        const pages = Array.from(document.querySelectorAll(".page"));
+        const tabs = Array.from(document.querySelectorAll(".tab[data-page]"));
+        const pageLinks = Array.from(document.querySelectorAll("[data-page]:not(.tab)"));
 
-    function setActivePage(key){
-      pages.forEach(p => p.classList.toggle("is-active", p.dataset.page === key));
-      tabs.forEach(t => t.setAttribute("aria-current", t.dataset.page === key ? "page" : "false"));
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    }
+        function setActivePage(key){
+          pages.forEach(p => p.classList.toggle("is-active", p.dataset.page === key));
+          tabs.forEach(t => t.setAttribute("aria-current", t.dataset.page === key ? "page" : "false"));
+          window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        }
 
-    function route(){
-      const hash = (location.hash || "#katu-empresa").replace("#","").trim();
-      const known = new Set(pages.map(p => p.dataset.page));
-      const key = known.has(hash) ? hash : "katu-empresa";
-      setActivePage(key);
-    }
+        function route(){
+          const hash = (location.hash || "#katu-empresa").replace("#","").trim();
+          const known = new Set(pages.map(p => p.dataset.page));
+          const key = known.has(hash) ? hash : "katu-empresa";
+          setActivePage(key);
+        }
 
-    function bindNav(el){
-      el.addEventListener("click", (e) => {
-        const key = el.dataset.page;
-        if(!key) return;
-        e.preventDefault();
-        history.pushState(null, "", "#" + key);
+        function bindNav(el){
+          el.addEventListener("click", (e) => {
+            const key = el.dataset.page;
+            if(!key) return;
+            e.preventDefault();
+            history.pushState(null, "", "#" + key);
+            route();
+          });
+        }
+
+        tabs.forEach(bindNav);
+        pageLinks.forEach(bindNav);
+
+        // in-page jumps (ex: download / empresa-sobre / voce-recursos)
+        const jumpLinks = Array.from(document.querySelectorAll("[data-jump]"));
+        jumpLinks.forEach(a => {
+          a.addEventListener("click", (e) => {
+            const id = a.dataset.jump;
+            if(!id) return;
+            e.preventDefault();
+            const target = document.getElementById(id);
+            if(!target) return;
+            // Ajuste para não cobrir com o header sticky
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+          });
+        });
+
+        window.addEventListener("popstate", route);
+        // Initial route
         route();
-      });
-    }
-
-    tabs.forEach(bindNav);
-    pageLinks.forEach(bindNav);
-
-    // in-page jumps (ex: download / empresa-sobre / voce-recursos)
-    const jumpLinks = Array.from(document.querySelectorAll("[data-jump]"));
-    jumpLinks.forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.dataset.jump;
-        if(!id) return;
-        e.preventDefault();
-        const target = document.getElementById(id);
-        if(!target) return;
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
     });
-
-    window.addEventListener("popstate", route);
-    window.addEventListener("load", route);
   </script>
 </body>
 </html>
