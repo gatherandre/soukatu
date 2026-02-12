@@ -1,913 +1,906 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2580
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KATU — Banco Digital</title>
+  <meta name="description" content="KATU Empresa e KATU Você — banco digital com atendimento humanizado, ágil, simples e transparente." />
 
-\f0\fs24 \cf0 <!doctype html>\
-<html lang="pt-br">\
-<head>\
-  <meta charset="utf-8" />\
-  <meta name="viewport" content="width=device-width, initial-scale=1" />\
-  <title>KATU \'97 Banco Digital</title>\
-  <meta name="description" content="KATU Empresa e KATU Voc\'ea \'97 banco digital com atendimento humanizado, \'e1gil, simples e transparente." />\
-\
-  <!-- Fonts -->\
-  <link rel="preconnect" href="https://fonts.googleapis.com">\
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">\
-\
-  <style>\
-    :root\{\
-      --forest:#1A3C34;   /* Verde Mata */\
-      --sand:#F2E8DC;     /* Areia */\
-      --clay:#C75B42;     /* Terracota */\
-      --gold:#D4AF37;     /* Ouro Fosco */\
-\
-      --ink: rgba(18,22,21,.92);\
-      --muted: rgba(18,22,21,.72);\
-\
-      --radius: 18px;\
-      --radius2: 26px;\
-\
-      --line: rgba(26,60,52,.12);\
-      --glass: rgba(242,232,220,.74);\
-\
-      --shadow: 0 26px 80px rgba(0,0,0,.16);\
-      --shadowSoft: 0 12px 32px rgba(0,0,0,.10);\
-\
-      --max: 1140px;\
-    \}\
-\
-    *\{ box-sizing:border-box; \}\
-    html\{ scroll-behavior:smooth; \}\
-    body\{\
-      margin:0;\
-      color:var(--ink);\
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\
-      line-height: 1.5;\
-      background: var(--sand);\
-      overflow-x: hidden;\
-    \}\
-\
-    /* =========\
-       Fundo premium (leve, moderno)\
-    ========= */\
-    .bg\{\
-      position: fixed;\
-      inset: 0;\
-      z-index: -2;\
-      background:\
-        radial-gradient(1100px 600px at 20% 0%, rgba(212,175,55,.14), transparent 55%),\
-        radial-gradient(900px 600px at 80% 18%, rgba(26,60,52,.10), transparent 55%),\
-        radial-gradient(700px 460px at 75% 92%, rgba(199,91,66,.10), transparent 55%),\
-        var(--sand);\
-    \}\
-\
-    /* Grain sutil */\
-    .grain\{\
-      position: fixed;\
-      inset: 0;\
-      z-index: -1;\
-      pointer-events:none;\
-      opacity: .22;\
-      background-image:\
-        radial-gradient(rgba(26,60,52,.10) 1px, transparent 1px),\
-        radial-gradient(rgba(199,91,66,.08) 1px, transparent 1px);\
-      background-position: 0 0, 11px 9px;\
-      background-size: 46px 46px;\
-      mix-blend-mode: multiply;\
-    \}\
-\
-    /* =========\
-       \'93Folhas\'94 como marca d\'92\'e1gua (SVG inline via data URI)\
-       \'97 org\'e2nico, vivo, mas discreto\
-    ========= */\
-    .leaf\{\
-      position: fixed;\
-      inset: auto;\
-      width: min(680px, 70vw);\
-      height: min(680px, 70vw);\
-      pointer-events:none;\
-      z-index: -1;\
-      opacity: .10;\
-      filter: blur(.0px);\
-      background-repeat: no-repeat;\
-      background-size: contain;\
-      background-image: url("data:image/svg+xml;utf8,\\\
-<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700' viewBox='0 0 700 700'>\\\
-<defs>\\\
-<linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>\\\
-<stop offset='0' stop-color='%231A3C34' stop-opacity='0.75'/>\\\
-<stop offset='0.55' stop-color='%23D4AF37' stop-opacity='0.55'/>\\\
-<stop offset='1' stop-color='%23C75B42' stop-opacity='0.55'/>\\\
-</linearGradient>\\\
-</defs>\\\
-<path d='M470 95c-96 24-170 92-208 165-45 86-46 171-6 252 46 94 141 161 262 144 55-8 106-34 144-73 42-42 68-98 75-160 13-112-48-246-267-328z' fill='none' stroke='url(%23g)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' opacity='0.85'/>\\\
-<path d='M210 575c38-104 120-195 235-257 70-38 142-58 214-63' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.35'/>\\\
-<path d='M260 520c28-66 78-128 146-176 43-30 90-52 142-65' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.22'/>\\\
-<path d='M320 465c19-44 52-86 96-118 28-20 60-35 97-45' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.16'/>\\\
-</svg>");\
-      transform: rotate(0deg);\
-    \}\
-    .leaf.right\{ top: 90px; right: -240px; transform: rotate(14deg); opacity:.09; \}\
-    .leaf.left\{ bottom: -260px; left: -250px; transform: rotate(-18deg); opacity:.08; \}\
-    .leaf.center\{ top: 46%; left: 26%; transform: rotate(22deg); opacity:.06; \}\
-\
-    a\{ color: inherit; text-decoration: none; \}\
-    .wrap\{ max-width: var(--max); margin: 0 auto; padding: 0 22px; \}\
-\
-    /* =========\
-       Header (glass)\
-    ========= */\
-    header\{\
-      position: sticky;\
-      top: 0;\
-      z-index: 50;\
-      background: rgba(242,232,220,.72);\
-      backdrop-filter: blur(12px);\
-      border-bottom: 1px solid var(--line);\
-    \}\
-    .nav\{\
-      display:flex;\
-      align-items:center;\
-      justify-content: space-between;\
-      gap: 16px;\
-      padding: 14px 0;\
-    \}\
-    .brand\{\
-      display:flex;\
-      align-items:center;\
-      gap: 12px;\
-      padding: 8px 10px;\
-      border-radius: 999px;\
-      border: 1px solid rgba(26,60,52,.10);\
-      background: rgba(255,255,255,.25);\
-      box-shadow: 0 10px 26px rgba(0,0,0,.04);\
-    \}\
-    .brand img\{ height: 32px; width:auto; display:block; \}\
-    .brand strong\{\
-      font-family: Manrope, Inter, sans-serif;\
-      font-weight: 800;\
-      letter-spacing: .14em;\
-      font-size: 13px;\
-      color: var(--forest);\
-    \}\
-\
-    .tabs\{\
-      display:flex;\
-      gap: 8px;\
-      flex-wrap: wrap;\
-      justify-content: center;\
-    \}\
-    .tab\{\
-      font-size: 13px;\
-      font-weight: 650;\
-      color: rgba(26,60,52,.88);\
-      padding: 9px 12px;\
-      border-radius: 999px;\
-      border: 1px solid rgba(26,60,52,.14);\
-      background: rgba(255,255,255,.18);\
-      transition: transform .08s ease, background .12s ease, box-shadow .12s ease;\
-      user-select:none;\
-      white-space: nowrap;\
-    \}\
-    .tab:hover\{\
-      background: rgba(26,60,52,.08);\
-      text-decoration:none;\
-      box-shadow: 0 14px 30px rgba(0,0,0,.06);\
-      transform: translateY(-1px);\
-    \}\
-    .tab[aria-current="page"]\{\
-      background: rgba(26,60,52,.12);\
-      border-color: rgba(26,60,52,.24);\
-    \}\
-\
-    .cta\{\
-      display:flex;\
-      gap: 10px;\
-      align-items:center;\
-      justify-content:flex-end;\
-      min-width: 210px;\
-    \}\
-\
-    /* =========\
-       Buttons\
-    ========= */\
-    .btn\{\
-      display:inline-flex;\
-      align-items:center;\
-      justify-content:center;\
-      gap: 10px;\
-      padding: 11px 15px;\
-      border-radius: 999px;\
-      font-weight: 650;\
-      font-size: 13px;\
-      border: 1px solid transparent;\
-      transition: transform .08s ease, box-shadow .14s ease, background .14s ease, filter .14s ease;\
-      cursor:pointer;\
-      user-select:none;\
-      white-space:nowrap;\
-    \}\
-    .btn:active\{ transform: translateY(1px); \}\
-    .btn-primary\{\
-      background: linear-gradient(135deg, rgba(199,91,66,.98), rgba(26,60,52,.92));\
-      color: var(--sand);\
-      border-color: rgba(212,175,55,.25);\
-      box-shadow: 0 18px 46px rgba(26,60,52,.16);\
-    \}\
-    .btn-primary:hover\{ filter: brightness(1.02); text-decoration:none; \}\
-    .btn-ghost\{\
-      background: rgba(255,255,255,.18);\
-      border-color: rgba(26,60,52,.18);\
-      color: var(--forest);\
-    \}\
-    .btn-ghost:hover\{\
-      background: rgba(26,60,52,.06);\
-      box-shadow: 0 14px 30px rgba(0,0,0,.06);\
-      transform: translateY(-1px);\
-      text-decoration:none;\
-    \}\
-\
-    /* =========\
-       Pages routing\
-    ========= */\
-    main\{ padding: 22px 0 10px; \}\
-    .page\{ display:none; animation: fade .16s ease; \}\
-    .page.is-active\{ display:block; \}\
-    @keyframes fade\{\
-      from\{ opacity:.68; transform: translateY(6px); \}\
-      to\{ opacity:1; transform: translateY(0); \}\
-    \}\
-\
-    /* =========\
-       Typography + Hero\
-    ========= */\
-    .tag\{\
-      display:inline-flex;\
-      align-items:center;\
-      gap: 10px;\
-      padding: 9px 12px;\
-      border-radius: 999px;\
-      background: rgba(26,60,52,.08);\
-      border: 1px solid rgba(26,60,52,.14);\
-      color: rgba(26,60,52,.92);\
-      font-size: 12.5px;\
-      font-weight: 650;\
-      width: fit-content;\
-    \}\
-    .heroGrid\{\
-      display:grid;\
-      grid-template-columns: 1.05fr .95fr;\
-      gap: 26px;\
-      align-items:center;\
-      padding: 26px 0 8px;\
-    \}\
-    h1\{\
-      margin: 14px 0 12px;\
-      font-family: Manrope, Inter, sans-serif;\
-      font-weight: 800;\
-      font-size: clamp(30px, 4vw, 52px);\
-      line-height: 1.05;\
-      letter-spacing: -0.02em;\
-      color: var(--forest);\
-    \}\
-    .lead\{\
-      margin: 0 0 18px;\
-      font-size: 16.5px;\
-      color: var(--muted);\
-      max-width: 62ch;\
-    \}\
-    .heroCtas\{\
-      display:flex;\
-      gap: 12px;\
-      flex-wrap: wrap;\
-      align-items:center;\
-      margin-top: 10px;\
-    \}\
-\
-    /* Badges */\
-    .badges\{\
-      display:flex;\
-      gap: 10px;\
-      align-items:center;\
-      flex-wrap: wrap;\
-      margin-top: 16px;\
-    \}\
-    .badge\{\
-      display:inline-flex;\
-      align-items:center;\
-      border-radius: 14px;\
-      overflow:hidden;\
-      border: 1px solid rgba(26,60,52,.14);\
-      background: rgba(255,255,255,.25);\
-      box-shadow: var(--shadowSoft);\
-      transition: transform .08s ease, box-shadow .14s ease, background .14s ease;\
-    \}\
-    .badge:hover\{\
-      transform: translateY(-1px);\
-      background: rgba(255,255,255,.40);\
-      box-shadow: 0 18px 48px rgba(0,0,0,.10);\
-      text-decoration:none;\
-    \}\
-    .badge img\{ height: 46px; width:auto; display:block; \}\
-\
-    /* Showcase */\
-    .showcase\{\
-      border-radius: var(--radius2);\
-      background:\
-        radial-gradient(1100px 520px at 30% 0%, rgba(212,175,55,.20), transparent 60%),\
-        radial-gradient(900px 520px at 100% 70%, rgba(199,91,66,.16), transparent 60%),\
-        linear-gradient(180deg, rgba(26,60,52,.96), rgba(26,60,52,.92));\
-      color: var(--sand);\
-      box-shadow: var(--shadow);\
-      border: 1px solid rgba(212,175,55,.18);\
-      padding: 22px;\
-      position: relative;\
-      overflow:hidden;\
-    \}\
-    .showcase::after\{\
-      content:"";\
-      position:absolute;\
-      inset:-70px;\
-      background-image: radial-gradient(rgba(242,232,220,.09) 1px, transparent 1px);\
-      background-size: 28px 28px;\
-      transform: rotate(8deg);\
-      opacity: .55;\
-      pointer-events:none;\
-    \}\
-    .showcaseInner\{ position:relative; z-index:2; display:grid; gap: 14px; \}\
-    .miniTitle\{\
-      display:flex;\
-      align-items:center;\
-      justify-content: space-between;\
-      gap: 12px;\
-    \}\
-    .miniTitle strong\{\
-      font-family: Manrope, Inter, sans-serif;\
-      font-weight: 800;\
-      letter-spacing: .14em;\
-    \}\
-    .pill\{\
-      font-size: 12px;\
-      padding: 8px 10px;\
-      border-radius: 999px;\
-      border: 1px solid rgba(242,232,220,.22);\
-      background: rgba(242,232,220,.08);\
-      color: rgba(242,232,220,.92);\
-      white-space: nowrap;\
-    \}\
-    .showcase img\{\
-      width: 100%;\
-      height: auto;\
-      display:block;\
-      border-radius: 18px;\
-      border: 1px solid rgba(242,232,220,.12);\
-      box-shadow: 0 18px 60px rgba(0,0,0,.26);\
-      transform: translateZ(0);\
-    \}\
-\
-    /* Sections */\
-    section\{ padding: 18px 0; \}\
-    .sectionTitle\{\
-      font-family: Manrope, Inter, sans-serif;\
-      font-weight: 800;\
-      font-size: 22px;\
-      letter-spacing: -0.01em;\
-      color: var(--forest);\
-      margin: 0 0 12px;\
-    \}\
-    .sectionSub\{\
-      margin: 0 0 18px;\
-      color: var(--muted);\
-      max-width: 82ch;\
-      font-size: 14.5px;\
-    \}\
-\
-    .grid3\{\
-      display:grid;\
-      grid-template-columns: repeat(3, 1fr);\
-      gap: 14px;\
-    \}\
-    .card\{\
-      background: rgba(255,255,255,.28);\
-      border: 1px solid rgba(26,60,52,.12);\
-      border-radius: var(--radius);\
-      padding: 18px;\
-      box-shadow: var(--shadowSoft);\
-      backdrop-filter: blur(10px);\
-      transition: transform .10s ease, box-shadow .14s ease;\
-    \}\
-    .card:hover\{\
-      transform: translateY(-2px);\
-      box-shadow: 0 20px 56px rgba(0,0,0,.12);\
-    \}\
-    .card h3\{\
-      margin: 0 0 8px;\
-      font-family: Manrope, Inter, sans-serif;\
-      font-weight: 800;\
-      font-size: 16px;\
-      color: var(--forest);\
-    \}\
-    .card p\{ margin:0; color: var(--muted); font-size: 14px; \}\
-\
-    .kpi\{\
-      display:flex;\
-      flex-wrap: wrap;\
-      gap: 10px;\
-      margin-top: 12px;\
-    \}\
-    .kpi span\{\
-      display:inline-flex;\
-      align-items:center;\
-      gap: 8px;\
-      padding: 8px 10px;\
-      border-radius: 999px;\
-      background: rgba(26,60,52,.06);\
-      border: 1px solid rgba(26,60,52,.10);\
-      color: rgba(26,60,52,.86);\
-      font-size: 12px;\
-      font-weight: 650;\
-    \}\
-\
-    .mediaRow\{\
-      display:grid;\
-      grid-template-columns: 1fr 1fr;\
-      gap: 14px;\
-      align-items: stretch;\
-    \}\
-    .media\{\
-      background: rgba(255,255,255,.24);\
-      border: 1px solid rgba(26,60,52,.12);\
-      border-radius: var(--radius2);\
-      padding: 14px;\
-      box-shadow: var(--shadowSoft);\
-      overflow:hidden;\
-      backdrop-filter: blur(10px);\
-    \}\
-    .media img\{\
-      width:100%;\
-      height:auto;\
-      display:block;\
-      border-radius: 16px;\
-      border: 1px solid rgba(26,60,52,.10);\
-    \}\
-\
-    /* Footer */\
-    footer\{\
-      margin-top: 26px;\
-      padding: 22px 0 34px;\
-      border-top: 1px solid var(--line);\
-      color: rgba(26,60,52,.72);\
-      font-size: 13px;\
-    \}\
-    .footGrid\{\
-      display:flex;\
-      flex-wrap: wrap;\
-      justify-content: space-between;\
-      gap: 14px;\
-      align-items: center;\
-    \}\
-    .footLinks\{\
-      display:flex;\
-      gap: 10px;\
-      flex-wrap: wrap;\
-      justify-content: flex-end;\
-    \}\
-    .footLinks a\{\
-      padding: 7px 10px;\
-      border-radius: 999px;\
-      border: 1px solid rgba(26,60,52,.10);\
-      background: rgba(255,255,255,.18);\
-    \}\
-    .footLinks a:hover\{\
-      background: rgba(26,60,52,.06);\
-      text-decoration:none;\
-    \}\
-\
-    /* Responsive */\
-    @media (max-width: 980px)\{\
-      .heroGrid\{ grid-template-columns: 1fr; \}\
-      .mediaRow\{ grid-template-columns: 1fr; \}\
-      .grid3\{ grid-template-columns: 1fr; \}\
-      .cta\{ min-width: auto; \}\
-      .leaf.center\{ display:none; \}\
-    \}\
-  </style>\
-</head>\
-\
-<body>\
-  <div class="bg" aria-hidden="true"></div>\
-  <div class="grain" aria-hidden="true"></div>\
-  <div class="leaf right" aria-hidden="true"></div>\
-  <div class="leaf left" aria-hidden="true"></div>\
-  <div class="leaf center" aria-hidden="true"></div>\
-\
-  <header>\
-    <div class="wrap">\
-      <div class="nav">\
-        <a class="brand" href="#katu-empresa" data-page="katu-empresa" aria-label="KATU">\
-          <img src="assets/logo.png" alt="KATU logo" />\
-          <strong>KATU</strong>\
-        </a>\
-\
-        <nav class="tabs" aria-label="P\'e1ginas">\
-          <a class="tab" href="#katu-empresa" data-page="katu-empresa" aria-current="page">KATU Empresa</a>\
-          <a class="tab" href="#katu-voce" data-page="katu-voce">KATU Voc\'ea</a>\
-          <a class="tab" href="#planos" data-page="planos">Planos</a>\
-          <a class="tab" href="#credito" data-page="credito">Cr\'e9dito</a>\
-        </nav>\
-\
-        <div class="cta">\
-          <a class="btn btn-ghost" href="#planos" data-page="planos">Ver planos</a>\
-          <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-        </div>\
-      </div>\
-    </div>\
-  </header>\
-\
-  <main class="wrap">\
-    <!-- =========================\
-         HOME \'97 KATU EMPRESA\
-    ========================== -->\
-    <div class="page is-active" id="page-katu-empresa" data-page="katu-empresa">\
-      <div class="heroGrid">\
-        <div>\
-          <div class="tag">KATU Empresa \'95 para quem toca o neg\'f3cio</div>\
-          <h1>Seu caixa muda todo dia.<br>Seu banco acompanha \'97 com clareza.</h1>\
-          <p class="lead">\
-            A KATU Empresa foi feita para micro e pequenas empresas que precisam de simplicidade,\
-            resposta r\'e1pida e um atendimento que fala a sua l\'edngua.\
-          </p>\
-\
-          <div class="heroCtas">\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-            <a class="btn btn-ghost" href="#empresa-sobre" data-jump="empresa-sobre">Entender em 1 minuto</a>\
-          </div>\
-\
-          <div class="badges" id="download" aria-label="Baixar o app">\
-            <a class="badge" href="#" aria-label="Baixar na App Store">\
-              <img src="assets/badge-appstore.svg" alt="Download on the App Store" />\
-            </a>\
-            <a class="badge" href="#" aria-label="Baixar no Google Play">\
-              <img src="assets/badge-googleplay.png" alt="Get it on Google Play" />\
-            </a>\
-          </div>\
-\
-          <div style="margin-top:10px; font-size:12px; color: rgba(26,60,52,.76);">\
-            *Mockup: substitua os links das lojas quando publicar.\
-          </div>\
-        </div>\
-\
-        <aside class="showcase" aria-label="Demonstra\'e7\'e3o visual KATU Empresa">\
-          <div class="showcaseInner">\
-            <div class="miniTitle">\
-              <strong>KATU</strong>\
-              <span class="pill">humano \'95 \'e1gil \'95 transparente</span>\
-            </div>\
-            <img src="assets/cartao.png" alt="KATU \'97 cart\'e3o e app" />\
-          </div>\
-        </aside>\
-      </div>\
-\
-      <section id="empresa-sobre">\
-        <h2 class="sectionTitle">Menos burocracia. Mais f\'f4lego.</h2>\
-        <p class="sectionSub">\
-          Um banco que n\'e3o complica: o essencial bem feito, com linguagem direta e decis\'f5es previs\'edveis.\
-        </p>\
-\
-        <div class="grid3">\
-          <div class="card">\
-            <h3>Cr\'e9dito ligado ao fluxo</h3>\
-            <p>Seu limite acompanha o que entra no caixa \'97 com regras claras e ajuste gradual.</p>\
-            <div class="kpi"><span>previs\'edvel</span><span>sem susto</span></div>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Conta do dia a dia</h3>\
-            <p>Pix, cart\'f5es e vis\'e3o do m\'eas. O que voc\'ea usa todo dia, sem ru\'eddo.</p>\
-            <div class="kpi"><span>simples</span><span>direto</span></div>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Atendimento de verdade</h3>\
-            <p>Gente resolvendo com voc\'ea. Sem labirinto de menu. Sem enrola\'e7\'e3o.</p>\
-            <div class="kpi"><span>r\'e1pido</span><span>humano</span></div>\
-          </div>\
-        </div>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">Sua empresa no centro. O resto, a KATU organiza.</h2>\
-\
-        <div class="mediaRow">\
-          <div class="media">\
-            <img src="assets/cartoes.png" alt="Cart\'f5es KATU" />\
-          </div>\
-\
-          <div class="card">\
-            <h3>KATU Empresa</h3>\
-            <p>Conta para operar e crescer: receber, pagar, separar, acompanhar e tomar decis\'e3o.</p>\
-            <div class="kpi"><span>organiza\'e7\'e3o</span><span>controle</span><span>clareza</span></div>\
-\
-            <div style="height:14px;"></div>\
-\
-            <h3>KATU Voc\'ea</h3>\
-            <p>A conta pessoal que conversa com a sua empresa \'97 pra vida ficar leve e o neg\'f3cio, saud\'e1vel.</p>\
-            <div class="kpi"><span>vida + empresa</span><span>sem confus\'e3o</span></div>\
-\
-            <div style="height:16px;"></div>\
-            <a class="btn btn-primary" href="#katu-voce" data-page="katu-voce">Ver KATU Voc\'ea</a>\
-          </div>\
-        </div>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">Ecossistema KATU</h2>\
-        <p class="sectionSub">O visual \'e9 limpo. A experi\'eancia tamb\'e9m.</p>\
-        <div class="media">\
-          <img src="assets/ecosystem.png" alt="Ecossistema KATU" />\
-        </div>\
-      </section>\
-    </div>\
-\
-    <!-- =========================\
-         HOME \'97 KATU VOC\'ca (novo)\
-    ========================== -->\
-    <div class="page" id="page-katu-voce" data-page="katu-voce">\
-      <div class="heroGrid">\
-        <div>\
-          <div class="tag">KATU Voc\'ea \'95 para quem empreende e vive</div>\
-          <h1>Uma conta pessoal que traz paz.<br>E conversa com o seu neg\'f3cio.</h1>\
-          <p class="lead">\
-            A KATU Voc\'ea foi pensada para quem n\'e3o tem tempo a perder: ver tudo com clareza,\
-            separar o que \'e9 seu do que \'e9 do neg\'f3cio e resolver com simplicidade.\
-          </p>\
-\
-          <div class="heroCtas">\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-            <a class="btn btn-ghost" href="#voce-recursos" data-jump="voce-recursos">O que voc\'ea ganha</a>\
-          </div>\
-\
-          <div class="badges" aria-label="Baixar o app">\
-            <a class="badge" href="#" aria-label="Baixar na App Store">\
-              <img src="assets/badge-appstore.svg" alt="Download on the App Store" />\
-            </a>\
-            <a class="badge" href="#" aria-label="Baixar no Google Play">\
-              <img src="assets/badge-googleplay.png" alt="Get it on Google Play" />\
-            </a>\
-          </div>\
-        </div>\
-\
-        <aside class="showcase" aria-label="Demonstra\'e7\'e3o visual KATU Voc\'ea">\
-          <div class="showcaseInner">\
-            <div class="miniTitle">\
-              <strong>KATU</strong>\
-              <span class="pill">leve \'95 humano \'95 transparente</span>\
-            </div>\
-            <img src="assets/ecosystem.png" alt="KATU \'97 vis\'e3o do ecossistema" />\
-          </div>\
-        </aside>\
-      </div>\
-\
-      <section id="voce-recursos">\
-        <h2 class="sectionTitle">O essencial para a vida \'97 do jeito certo.</h2>\
-        <p class="sectionSub">\
-          Uma experi\'eancia que parece \'93viva\'94: espa\'e7o, respira\'e7\'e3o, clareza e escolhas simples.\
-        </p>\
-\
-        <div class="grid3">\
-          <div class="card">\
-            <h3>Separar sem sofrimento</h3>\
-            <p>Vida e empresa no mesmo lugar, mas com divis\'e3o clara para evitar bagun\'e7a.</p>\
-            <div class="kpi"><span>organiza</span><span>acalma</span></div>\
-          </div>\
-          <div class="card">\
-            <h3>Vis\'e3o r\'e1pida do m\'eas</h3>\
-            <p>O que entrou, o que saiu, onde foi. Sem ca\'e7a ao clique.</p>\
-            <div class="kpi"><span>claro</span><span>direto</span></div>\
-          </div>\
-          <div class="card">\
-            <h3>Atendimento humano</h3>\
-            <p>Quando voc\'ea precisa, tem gente de verdade \'97 e resposta.</p>\
-            <div class="kpi"><span>r\'e1pido</span><span>simples</span></div>\
-          </div>\
-        </div>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">KATU Voc\'ea + KATU Empresa</h2>\
-        <div class="mediaRow">\
-          <div class="card">\
-            <h3>Um ecossistema, duas experi\'eancias</h3>\
-            <p>\
-              A pessoa por tr\'e1s do CNPJ precisa de tranquilidade.\
-              A empresa precisa de controle. A KATU conecta os dois sem complicar.\
-            </p>\
-            <div class="kpi"><span>vida</span><span>neg\'f3cio</span><span>clareza</span></div>\
-            <div style="height:16px;"></div>\
-            <a class="btn btn-primary" href="#katu-empresa" data-page="katu-empresa">Ver KATU Empresa</a>\
-          </div>\
-          <div class="media">\
-            <img src="assets/cartao.png" alt="KATU \'97 cart\'e3o e app" />\
-          </div>\
-        </div>\
-      </section>\
-    </div>\
-\
-    <!-- =========================\
-         PLANOS (mock)\
-    ========================== -->\
-    <div class="page" id="page-planos" data-page="planos">\
-      <section>\
-        <div class="tag">Planos \'95 simples de entender</div>\
-        <h1>Escolha o n\'edvel certo. Suba quando fizer sentido.</h1>\
-        <p class="lead">\
-          Mockup enxuto: poucos planos, texto humano e foco em clareza.\
-        </p>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">KATU Empresa</h2>\
-        <div class="grid3">\
-          <div class="card">\
-            <h3>Empresa Essencial</h3>\
-            <p>Para come\'e7ar a operar com Pix, cart\'e3o e vis\'e3o do caixa.</p>\
-            <div class="kpi"><span>essencial</span><span>sem ru\'eddo</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Empresa Plus</h3>\
-            <p>Mais controles, mais cart\'f5es para o time, mais organiza\'e7\'e3o.</p>\
-            <div class="kpi"><span>controle</span><span>time</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Empresa Crescimento</h3>\
-            <p>Para escalar com rotinas, transpar\'eancia e suporte.</p>\
-            <div class="kpi"><span>ritmo</span><span>governan\'e7a</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-        </div>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">KATU Voc\'ea</h2>\
-        <div class="grid3">\
-          <div class="card">\
-            <h3>Voc\'ea</h3>\
-            <p>Conta pessoal para organizar a vida e acompanhar o neg\'f3cio.</p>\
-            <div class="kpi"><span>leve</span><span>claro</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Voc\'ea+</h3>\
-            <p>Benef\'edcios adicionais (mockup) \'97 quando fizer sentido.</p>\
-            <div class="kpi"><span>benef\'edcios</span><span>simplicidade</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-\
-          <div class="card">\
-            <h3>Voc\'ea Fam\'edlia</h3>\
-            <p>Organiza\'e7\'e3o compartilhada (mockup) com controle.</p>\
-            <div class="kpi"><span>compartilhar</span><span>controle</span></div>\
-            <div style="height:14px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-        </div>\
-      </section>\
-    </div>\
-\
-    <!-- =========================\
-         CR\'c9DITO (mock)\
-    ========================== -->\
-    <div class="page" id="page-credito" data-page="credito">\
-      <section>\
-        <div class="tag">Cr\'e9dito \'95 sem mist\'e9rio</div>\
-        <h1>Cr\'e9dito que acompanha o fluxo. Com regras claras.</h1>\
-        <p class="lead">\
-          A ideia \'e9 simples: entender o movimento real do seu neg\'f3cio e evoluir o limite com previsibilidade.\
-        </p>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">Como funciona (mockup)</h2>\
-        <p class="sectionSub">Tr\'eas passos, sem \'93pegadinha\'94, com linguagem de gente.</p>\
-\
-        <div class="grid3">\
-          <div class="card">\
-            <h3>1) Entender o fluxo</h3>\
-            <p>O sistema observa entradas e sa\'eddas para formar uma vis\'e3o real do caixa.</p>\
-          </div>\
-          <div class="card">\
-            <h3>2) Definir um limite</h3>\
-            <p>O limite nasce do comportamento e \'e9 recalibrado com o tempo.</p>\
-          </div>\
-          <div class="card">\
-            <h3>3) Ajustar com transpar\'eancia</h3>\
-            <p>Quando o fluxo muda, o limite acompanha \'97 sem susto.</p>\
-          </div>\
-        </div>\
-      </section>\
-\
-      <section>\
-        <h2 class="sectionTitle">Transpar\'eancia que d\'e1 confian\'e7a</h2>\
-        <div class="mediaRow">\
-          <div class="media">\
-            <img src="assets/ecosystem.png" alt="Ecossistema KATU" />\
-          </div>\
-          <div class="card">\
-            <h3>Voc\'ea entende o \'93porqu\'ea\'94</h3>\
-            <p>\
-              Se o limite sobe ou desce, voc\'ea v\'ea o motivo e o que fazer para evoluir.\
-              Isso reduz ansiedade e melhora o planejamento.\
-            </p>\
-            <div class="kpi"><span>clareza</span><span>previsibilidade</span><span>confian\'e7a</span></div>\
-            <div style="height:16px;"></div>\
-            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>\
-          </div>\
-        </div>\
-      </section>\
-    </div>\
-\
-    <footer>\
-      <div class="footGrid">\
-        <div>\
-          <strong style="color:var(--forest); font-family:Manrope, Inter, sans-serif;">KATU</strong>\
-          <div>Mockup institucional \'95 soukatu.com.br</div>\
-        </div>\
-        <div class="footLinks">\
-          <a href="#katu-empresa" data-page="katu-empresa">KATU Empresa</a>\
-          <a href="#katu-voce" data-page="katu-voce">KATU Voc\'ea</a>\
-          <a href="#planos" data-page="planos">Planos</a>\
-          <a href="#credito" data-page="credito">Cr\'e9dito</a>\
-        </div>\
-      </div>\
-      <div style="margin-top:12px; opacity:.85;">\
-        \'a9 <span id="y"></span> \'95 Institucional (pr\'e9-lan\'e7amento)\
-      </div>\
-    </footer>\
-  </main>\
-\
-  <script>\
-    // ano\
-    document.getElementById("y").textContent = new Date().getFullYear();\
-\
-    // pages\
-    const pages = Array.from(document.querySelectorAll(".page"));\
-    const tabs = Array.from(document.querySelectorAll(".tab[data-page]"));\
-    const pageLinks = Array.from(document.querySelectorAll("[data-page]:not(.tab)"));\
-\
-    function setActivePage(key)\{\
-      pages.forEach(p => p.classList.toggle("is-active", p.dataset.page === key));\
-      tabs.forEach(t => t.setAttribute("aria-current", t.dataset.page === key ? "page" : "false"));\
-      window.scrollTo(\{ top: 0, left: 0, behavior: "instant" \});\
-    \}\
-\
-    function route()\{\
-      const hash = (location.hash || "#katu-empresa").replace("#","").trim();\
-      const known = new Set(pages.map(p => p.dataset.page));\
-      const key = known.has(hash) ? hash : "katu-empresa";\
-      setActivePage(key);\
-    \}\
-\
-    function bindNav(el)\{\
-      el.addEventListener("click", (e) => \{\
-        const key = el.dataset.page;\
-        if(!key) return;\
-        e.preventDefault();\
-        history.pushState(null, "", "#" + key);\
-        route();\
-      \});\
-    \}\
-\
-    tabs.forEach(bindNav);\
-    pageLinks.forEach(bindNav);\
-\
-    // in-page jumps (ex: download / empresa-sobre / voce-recursos)\
-    const jumpLinks = Array.from(document.querySelectorAll("[data-jump]"));\
-    jumpLinks.forEach(a => \{\
-      a.addEventListener("click", (e) => \{\
-        const id = a.dataset.jump;\
-        if(!id) return;\
-        e.preventDefault();\
-        const target = document.getElementById(id);\
-        if(!target) return;\
-        target.scrollIntoView(\{ behavior: "smooth", block: "start" \});\
-      \});\
-    \});\
-\
-    window.addEventListener("popstate", route);\
-    window.addEventListener("load", route);\
-  </script>\
-</body>\
-</html>}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --forest:#1A3C34;   /* Verde Mata */
+      --sand:#F2E8DC;     /* Areia */
+      --clay:#C75B42;     /* Terracota */
+      --gold:#D4AF37;     /* Ouro Fosco */
+
+      --ink: rgba(18,22,21,.92);
+      --muted: rgba(18,22,21,.72);
+
+      --radius: 18px;
+      --radius2: 26px;
+
+      --line: rgba(26,60,52,.12);
+      --glass: rgba(242,232,220,.74);
+
+      --shadow: 0 26px 80px rgba(0,0,0,.16);
+      --shadowSoft: 0 12px 32px rgba(0,0,0,.10);
+
+      --max: 1140px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      background: var(--sand);
+      overflow-x: hidden;
+    }
+
+    /* =========
+       Fundo premium (leve, moderno)
+    ========= */
+    .bg{
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(1100px 600px at 20% 0%, rgba(212,175,55,.14), transparent 55%),
+        radial-gradient(900px 600px at 80% 18%, rgba(26,60,52,.10), transparent 55%),
+        radial-gradient(700px 460px at 75% 92%, rgba(199,91,66,.10), transparent 55%),
+        var(--sand);
+    }
+
+    /* Grain sutil */
+    .grain{
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events:none;
+      opacity: .22;
+      background-image:
+        radial-gradient(rgba(26,60,52,.10) 1px, transparent 1px),
+        radial-gradient(rgba(199,91,66,.08) 1px, transparent 1px);
+      background-position: 0 0, 11px 9px;
+      background-size: 46px 46px;
+      mix-blend-mode: multiply;
+    }
+
+    /* =========
+       “Folhas” como marca d’água (SVG inline via data URI)
+       — orgânico, vivo, mas discreto
+    ========= */
+    .leaf{
+      position: fixed;
+      inset: auto;
+      width: min(680px, 70vw);
+      height: min(680px, 70vw);
+      pointer-events:none;
+      z-index: -1;
+      opacity: .10;
+      filter: blur(.0px);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("data:image/svg+xml;utf8,\\
+<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700' viewBox='0 0 700 700'>\\
+<defs>\\
+<linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>\\
+<stop offset='0' stop-color='%231A3C34' stop-opacity='0.75'/>\\
+<stop offset='0.55' stop-color='%23D4AF37' stop-opacity='0.55'/>\\
+<stop offset='1' stop-color='%23C75B42' stop-opacity='0.55'/>\\
+</linearGradient>\\
+</defs>\\
+<path d='M470 95c-96 24-170 92-208 165-45 86-46 171-6 252 46 94 141 161 262 144 55-8 106-34 144-73 42-42 68-98 75-160 13-112-48-246-267-328z' fill='none' stroke='url(%23g)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' opacity='0.85'/>\\
+<path d='M210 575c38-104 120-195 235-257 70-38 142-58 214-63' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.35'/>\\
+<path d='M260 520c28-66 78-128 146-176 43-30 90-52 142-65' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.22'/>\\
+<path d='M320 465c19-44 52-86 96-118 28-20 60-35 97-45' fill='none' stroke='%231A3C34' stroke-width='6' stroke-linecap='round' opacity='0.16'/>\\
+</svg>");
+      transform: rotate(0deg);
+    }
+    .leaf.right{ top: 90px; right: -240px; transform: rotate(14deg); opacity:.09; }
+    .leaf.left{ bottom: -260px; left: -250px; transform: rotate(-18deg); opacity:.08; }
+    .leaf.center{ top: 46%; left: 26%; transform: rotate(22deg); opacity:.06; }
+
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+    /* =========
+       Header (glass)
+    ========= */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(242,232,220,.72);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(26,60,52,.10);
+      background: rgba(255,255,255,.25);
+      box-shadow: 0 10px 26px rgba(0,0,0,.04);
+    }
+    .brand img{ height: 32px; width:auto; display:block; }
+    .brand strong{
+      font-family: Manrope, Inter, sans-serif;
+      font-weight: 800;
+      letter-spacing: .14em;
+      font-size: 13px;
+      color: var(--forest);
+    }
+
+    .tabs{
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .tab{
+      font-size: 13px;
+      font-weight: 650;
+      color: rgba(26,60,52,.88);
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(26,60,52,.14);
+      background: rgba(255,255,255,.18);
+      transition: transform .08s ease, background .12s ease, box-shadow .12s ease;
+      user-select:none;
+      white-space: nowrap;
+    }
+    .tab:hover{
+      background: rgba(26,60,52,.08);
+      text-decoration:none;
+      box-shadow: 0 14px 30px rgba(0,0,0,.06);
+      transform: translateY(-1px);
+    }
+    .tab[aria-current="page"]{
+      background: rgba(26,60,52,.12);
+      border-color: rgba(26,60,52,.24);
+    }
+
+    .cta{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-end;
+      min-width: 210px;
+    }
+
+    /* =========
+       Buttons
+    ========= */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 11px 15px;
+      border-radius: 999px;
+      font-weight: 650;
+      font-size: 13px;
+      border: 1px solid transparent;
+      transition: transform .08s ease, box-shadow .14s ease, background .14s ease, filter .14s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn-primary{
+      background: linear-gradient(135deg, rgba(199,91,66,.98), rgba(26,60,52,.92));
+      color: var(--sand);
+      border-color: rgba(212,175,55,.25);
+      box-shadow: 0 18px 46px rgba(26,60,52,.16);
+    }
+    .btn-primary:hover{ filter: brightness(1.02); text-decoration:none; }
+    .btn-ghost{
+      background: rgba(255,255,255,.18);
+      border-color: rgba(26,60,52,.18);
+      color: var(--forest);
+    }
+    .btn-ghost:hover{
+      background: rgba(26,60,52,.06);
+      box-shadow: 0 14px 30px rgba(0,0,0,.06);
+      transform: translateY(-1px);
+      text-decoration:none;
+    }
+
+    /* =========
+       Pages routing
+    ========= */
+    main{ padding: 22px 0 10px; }
+    .page{ display:none; animation: fade .16s ease; }
+    .page.is-active{ display:block; }
+    @keyframes fade{
+      from{ opacity:.68; transform: translateY(6px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    /* =========
+       Typography + Hero
+    ========= */
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(26,60,52,.08);
+      border: 1px solid rgba(26,60,52,.14);
+      color: rgba(26,60,52,.92);
+      font-size: 12.5px;
+      font-weight: 650;
+      width: fit-content;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 26px;
+      align-items:center;
+      padding: 26px 0 8px;
+    }
+    h1{
+      margin: 14px 0 12px;
+      font-family: Manrope, Inter, sans-serif;
+      font-weight: 800;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--forest);
+    }
+    .lead{
+      margin: 0 0 18px;
+      font-size: 16.5px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+    .heroCtas{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items:center;
+      margin-top: 10px;
+    }
+
+    /* Badges */
+    .badges{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      border-radius: 14px;
+      overflow:hidden;
+      border: 1px solid rgba(26,60,52,.14);
+      background: rgba(255,255,255,.25);
+      box-shadow: var(--shadowSoft);
+      transition: transform .08s ease, box-shadow .14s ease, background .14s ease;
+    }
+    .badge:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.40);
+      box-shadow: 0 18px 48px rgba(0,0,0,.10);
+      text-decoration:none;
+    }
+    .badge img{ height: 46px; width:auto; display:block; }
+
+    /* Showcase */
+    .showcase{
+      border-radius: var(--radius2);
+      background:
+        radial-gradient(1100px 520px at 30% 0%, rgba(212,175,55,.20), transparent 60%),
+        radial-gradient(900px 520px at 100% 70%, rgba(199,91,66,.16), transparent 60%),
+        linear-gradient(180deg, rgba(26,60,52,.96), rgba(26,60,52,.92));
+      color: var(--sand);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(212,175,55,.18);
+      padding: 22px;
+      position: relative;
+      overflow:hidden;
+    }
+    .showcase::after{
+      content:"";
+      position:absolute;
+      inset:-70px;
+      background-image: radial-gradient(rgba(242,232,220,.09) 1px, transparent 1px);
+      background-size: 28px 28px;
+      transform: rotate(8deg);
+      opacity: .55;
+      pointer-events:none;
+    }
+    .showcaseInner{ position:relative; z-index:2; display:grid; gap: 14px; }
+    .miniTitle{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .miniTitle strong{
+      font-family: Manrope, Inter, sans-serif;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+    .pill{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(242,232,220,.22);
+      background: rgba(242,232,220,.08);
+      color: rgba(242,232,220,.92);
+      white-space: nowrap;
+    }
+    .showcase img{
+      width: 100%;
+      height: auto;
+      display:block;
+      border-radius: 18px;
+      border: 1px solid rgba(242,232,220,.12);
+      box-shadow: 0 18px 60px rgba(0,0,0,.26);
+      transform: translateZ(0);
+    }
+
+    /* Sections */
+    section{ padding: 18px 0; }
+    .sectionTitle{
+      font-family: Manrope, Inter, sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      color: var(--forest);
+      margin: 0 0 12px;
+    }
+    .sectionSub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 82ch;
+      font-size: 14.5px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: rgba(255,255,255,.28);
+      border: 1px solid rgba(26,60,52,.12);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadowSoft);
+      backdrop-filter: blur(10px);
+      transition: transform .10s ease, box-shadow .14s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 20px 56px rgba(0,0,0,.12);
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-family: Manrope, Inter, sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--forest);
+    }
+    .card p{ margin:0; color: var(--muted); font-size: 14px; }
+
+    .kpi{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .kpi span{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(26,60,52,.06);
+      border: 1px solid rgba(26,60,52,.10);
+      color: rgba(26,60,52,.86);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .mediaRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .media{
+      background: rgba(255,255,255,.24);
+      border: 1px solid rgba(26,60,52,.12);
+      border-radius: var(--radius2);
+      padding: 14px;
+      box-shadow: var(--shadowSoft);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+    .media img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 16px;
+      border: 1px solid rgba(26,60,52,.10);
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 26px;
+      padding: 22px 0 34px;
+      border-top: 1px solid var(--line);
+      color: rgba(26,60,52,.72);
+      font-size: 13px;
+    }
+    .footGrid{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+    .footLinks{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .footLinks a{
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(26,60,52,.10);
+      background: rgba(255,255,255,.18);
+    }
+    .footLinks a:hover{
+      background: rgba(26,60,52,.06);
+      text-decoration:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .mediaRow{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .cta{ min-width: auto; }
+      .leaf.center{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="leaf right" aria-hidden="true"></div>
+  <div class="leaf left" aria-hidden="true"></div>
+  <div class="leaf center" aria-hidden="true"></div>
+
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#katu-empresa" data-page="katu-empresa" aria-label="KATU">
+          <img src="assets/logo.png" alt="KATU logo" />
+          <strong>KATU</strong>
+        </a>
+
+        <nav class="tabs" aria-label="Páginas">
+          <a class="tab" href="#katu-empresa" data-page="katu-empresa" aria-current="page">KATU Empresa</a>
+          <a class="tab" href="#katu-voce" data-page="katu-voce">KATU Você</a>
+          <a class="tab" href="#planos" data-page="planos">Planos</a>
+          <a class="tab" href="#credito" data-page="credito">Crédito</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn btn-ghost" href="#planos" data-page="planos">Ver planos</a>
+          <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- =========================
+         HOME — KATU EMPRESA
+    ========================== -->
+    <div class="page is-active" id="page-katu-empresa" data-page="katu-empresa">
+      <div class="heroGrid">
+        <div>
+          <div class="tag">KATU Empresa • para quem toca o negócio</div>
+          <h1>Seu caixa muda todo dia.<br>Seu banco acompanha — com clareza.</h1>
+          <p class="lead">
+            A KATU Empresa foi feita para micro e pequenas empresas que precisam de simplicidade,
+            resposta rápida e um atendimento que fala a sua língua.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+            <a class="btn btn-ghost" href="#empresa-sobre" data-jump="empresa-sobre">Entender em 1 minuto</a>
+          </div>
+
+          <div class="badges" id="download" aria-label="Baixar o app">
+            <a class="badge" href="#" aria-label="Baixar na App Store">
+              <img src="assets/badge-appstore.svg" alt="Download on the App Store" />
+            </a>
+            <a class="badge" href="#" aria-label="Baixar no Google Play">
+              <img src="assets/badge-googleplay.png" alt="Get it on Google Play" />
+            </a>
+          </div>
+
+          <div style="margin-top:10px; font-size:12px; color: rgba(26,60,52,.76);">
+            *Mockup: substitua os links das lojas quando publicar.
+          </div>
+        </div>
+
+        <aside class="showcase" aria-label="Demonstração visual KATU Empresa">
+          <div class="showcaseInner">
+            <div class="miniTitle">
+              <strong>KATU</strong>
+              <span class="pill">humano • ágil • transparente</span>
+            </div>
+            <img src="assets/cartao.png" alt="KATU — cartão e app" />
+          </div>
+        </aside>
+      </div>
+
+      <section id="empresa-sobre">
+        <h2 class="sectionTitle">Menos burocracia. Mais fôlego.</h2>
+        <p class="sectionSub">
+          Um banco que não complica: o essencial bem feito, com linguagem direta e decisões previsíveis.
+        </p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Crédito ligado ao fluxo</h3>
+            <p>Seu limite acompanha o que entra no caixa — com regras claras e ajuste gradual.</p>
+            <div class="kpi"><span>previsível</span><span>sem susto</span></div>
+          </div>
+
+          <div class="card">
+            <h3>Conta do dia a dia</h3>
+            <p>Pix, cartões e visão do mês. O que você usa todo dia, sem ruído.</p>
+            <div class="kpi"><span>simples</span><span>direto</span></div>
+          </div>
+
+          <div class="card">
+            <h3>Atendimento de verdade</h3>
+            <p>Gente resolvendo com você. Sem labirinto de menu. Sem enrolação.</p>
+            <div class="kpi"><span>rápido</span><span>humano</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">Sua empresa no centro. O resto, a KATU organiza.</h2>
+
+        <div class="mediaRow">
+          <div class="media">
+            <img src="assets/cartoes.png" alt="Cartões KATU" />
+          </div>
+
+          <div class="card">
+            <h3>KATU Empresa</h3>
+            <p>Conta para operar e crescer: receber, pagar, separar, acompanhar e tomar decisão.</p>
+            <div class="kpi"><span>organização</span><span>controle</span><span>clareza</span></div>
+
+            <div style="height:14px;"></div>
+
+            <h3>KATU Você</h3>
+            <p>A conta pessoal que conversa com a sua empresa — pra vida ficar leve e o negócio, saudável.</p>
+            <div class="kpi"><span>vida + empresa</span><span>sem confusão</span></div>
+
+            <div style="height:16px;"></div>
+            <a class="btn btn-primary" href="#katu-voce" data-page="katu-voce">Ver KATU Você</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">Ecossistema KATU</h2>
+        <p class="sectionSub">O visual é limpo. A experiência também.</p>
+        <div class="media">
+          <img src="assets/ecosystem.png" alt="Ecossistema KATU" />
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================
+         HOME — KATU VOCÊ (novo)
+    ========================== -->
+    <div class="page" id="page-katu-voce" data-page="katu-voce">
+      <div class="heroGrid">
+        <div>
+          <div class="tag">KATU Você • para quem empreende e vive</div>
+          <h1>Uma conta pessoal que traz paz.<br>E conversa com o seu negócio.</h1>
+          <p class="lead">
+            A KATU Você foi pensada para quem não tem tempo a perder: ver tudo com clareza,
+            separar o que é seu do que é do negócio e resolver com simplicidade.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+            <a class="btn btn-ghost" href="#voce-recursos" data-jump="voce-recursos">O que você ganha</a>
+          </div>
+
+          <div class="badges" aria-label="Baixar o app">
+            <a class="badge" href="#" aria-label="Baixar na App Store">
+              <img src="assets/badge-appstore.svg" alt="Download on the App Store" />
+            </a>
+            <a class="badge" href="#" aria-label="Baixar no Google Play">
+              <img src="assets/badge-googleplay.png" alt="Get it on Google Play" />
+            </a>
+          </div>
+        </div>
+
+        <aside class="showcase" aria-label="Demonstração visual KATU Você">
+          <div class="showcaseInner">
+            <div class="miniTitle">
+              <strong>KATU</strong>
+              <span class="pill">leve • humano • transparente</span>
+            </div>
+            <img src="assets/ecosystem.png" alt="KATU — visão do ecossistema" />
+          </div>
+        </aside>
+      </div>
+
+      <section id="voce-recursos">
+        <h2 class="sectionTitle">O essencial para a vida — do jeito certo.</h2>
+        <p class="sectionSub">
+          Uma experiência que parece “viva”: espaço, respiração, clareza e escolhas simples.
+        </p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Separar sem sofrimento</h3>
+            <p>Vida e empresa no mesmo lugar, mas com divisão clara para evitar bagunça.</p>
+            <div class="kpi"><span>organiza</span><span>acalma</span></div>
+          </div>
+          <div class="card">
+            <h3>Visão rápida do mês</h3>
+            <p>O que entrou, o que saiu, onde foi. Sem caça ao clique.</p>
+            <div class="kpi"><span>claro</span><span>direto</span></div>
+          </div>
+          <div class="card">
+            <h3>Atendimento humano</h3>
+            <p>Quando você precisa, tem gente de verdade — e resposta.</p>
+            <div class="kpi"><span>rápido</span><span>simples</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">KATU Você + KATU Empresa</h2>
+        <div class="mediaRow">
+          <div class="card">
+            <h3>Um ecossistema, duas experiências</h3>
+            <p>
+              A pessoa por trás do CNPJ precisa de tranquilidade.
+              A empresa precisa de controle. A KATU conecta os dois sem complicar.
+            </p>
+            <div class="kpi"><span>vida</span><span>negócio</span><span>clareza</span></div>
+            <div style="height:16px;"></div>
+            <a class="btn btn-primary" href="#katu-empresa" data-page="katu-empresa">Ver KATU Empresa</a>
+          </div>
+          <div class="media">
+            <img src="assets/cartao.png" alt="KATU — cartão e app" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================
+         PLANOS (mock)
+    ========================== -->
+    <div class="page" id="page-planos" data-page="planos">
+      <section>
+        <div class="tag">Planos • simples de entender</div>
+        <h1>Escolha o nível certo. Suba quando fizer sentido.</h1>
+        <p class="lead">
+          Mockup enxuto: poucos planos, texto humano e foco em clareza.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">KATU Empresa</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Empresa Essencial</h3>
+            <p>Para começar a operar com Pix, cartão e visão do caixa.</p>
+            <div class="kpi"><span>essencial</span><span>sem ruído</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+
+          <div class="card">
+            <h3>Empresa Plus</h3>
+            <p>Mais controles, mais cartões para o time, mais organização.</p>
+            <div class="kpi"><span>controle</span><span>time</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+
+          <div class="card">
+            <h3>Empresa Crescimento</h3>
+            <p>Para escalar com rotinas, transparência e suporte.</p>
+            <div class="kpi"><span>ritmo</span><span>governança</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">KATU Você</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Você</h3>
+            <p>Conta pessoal para organizar a vida e acompanhar o negócio.</p>
+            <div class="kpi"><span>leve</span><span>claro</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+
+          <div class="card">
+            <h3>Você+</h3>
+            <p>Benefícios adicionais (mockup) — quando fizer sentido.</p>
+            <div class="kpi"><span>benefícios</span><span>simplicidade</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+
+          <div class="card">
+            <h3>Você Família</h3>
+            <p>Organização compartilhada (mockup) com controle.</p>
+            <div class="kpi"><span>compartilhar</span><span>controle</span></div>
+            <div style="height:14px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================
+         CRÉDITO (mock)
+    ========================== -->
+    <div class="page" id="page-credito" data-page="credito">
+      <section>
+        <div class="tag">Crédito • sem mistério</div>
+        <h1>Crédito que acompanha o fluxo. Com regras claras.</h1>
+        <p class="lead">
+          A ideia é simples: entender o movimento real do seu negócio e evoluir o limite com previsibilidade.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">Como funciona (mockup)</h2>
+        <p class="sectionSub">Três passos, sem “pegadinha”, com linguagem de gente.</p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>1) Entender o fluxo</h3>
+            <p>O sistema observa entradas e saídas para formar uma visão real do caixa.</p>
+          </div>
+          <div class="card">
+            <h3>2) Definir um limite</h3>
+            <p>O limite nasce do comportamento e é recalibrado com o tempo.</p>
+          </div>
+          <div class="card">
+            <h3>3) Ajustar com transparência</h3>
+            <p>Quando o fluxo muda, o limite acompanha — sem susto.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="sectionTitle">Transparência que dá confiança</h2>
+        <div class="mediaRow">
+          <div class="media">
+            <img src="assets/ecosystem.png" alt="Ecossistema KATU" />
+          </div>
+          <div class="card">
+            <h3>Você entende o “porquê”</h3>
+            <p>
+              Se o limite sobe ou desce, você vê o motivo e o que fazer para evoluir.
+              Isso reduz ansiedade e melhora o planejamento.
+            </p>
+            <div class="kpi"><span>clareza</span><span>previsibilidade</span><span>confiança</span></div>
+            <div style="height:16px;"></div>
+            <a class="btn btn-primary" href="#download" data-jump="download">Baixar o app</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footGrid">
+        <div>
+          <strong style="color:var(--forest); font-family:Manrope, Inter, sans-serif;">KATU</strong>
+          <div>Mockup institucional • soukatu.com.br</div>
+        </div>
+        <div class="footLinks">
+          <a href="#katu-empresa" data-page="katu-empresa">KATU Empresa</a>
+          <a href="#katu-voce" data-page="katu-voce">KATU Você</a>
+          <a href="#planos" data-page="planos">Planos</a>
+          <a href="#credito" data-page="credito">Crédito</a>
+        </div>
+      </div>
+      <div style="margin-top:12px; opacity:.85;">
+        © <span id="y"></span> • Institucional (pré-lançamento)
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // ano
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // pages
+    const pages = Array.from(document.querySelectorAll(".page"));
+    const tabs = Array.from(document.querySelectorAll(".tab[data-page]"));
+    const pageLinks = Array.from(document.querySelectorAll("[data-page]:not(.tab)"));
+
+    function setActivePage(key){
+      pages.forEach(p => p.classList.toggle("is-active", p.dataset.page === key));
+      tabs.forEach(t => t.setAttribute("aria-current", t.dataset.page === key ? "page" : "false"));
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+
+    function route(){
+      const hash = (location.hash || "#katu-empresa").replace("#","").trim();
+      const known = new Set(pages.map(p => p.dataset.page));
+      const key = known.has(hash) ? hash : "katu-empresa";
+      setActivePage(key);
+    }
+
+    function bindNav(el){
+      el.addEventListener("click", (e) => {
+        const key = el.dataset.page;
+        if(!key) return;
+        e.preventDefault();
+        history.pushState(null, "", "#" + key);
+        route();
+      });
+    }
+
+    tabs.forEach(bindNav);
+    pageLinks.forEach(bindNav);
+
+    // in-page jumps (ex: download / empresa-sobre / voce-recursos)
+    const jumpLinks = Array.from(document.querySelectorAll("[data-jump]"));
+    jumpLinks.forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.dataset.jump;
+        if(!id) return;
+        e.preventDefault();
+        const target = document.getElementById(id);
+        if(!target) return;
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    window.addEventListener("popstate", route);
+    window.addEventListener("load", route);
+  </script>
+</body>
+</html>
