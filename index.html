@@ -144,12 +144,16 @@
       opacity: 0.9;
     }
     .brand img {
-      height: 44px; 
-      width: auto;    /* Ajusta a largura automaticamente para não achatar o logo */
-      object-fit: contain;
-      display: block;
-      background: transparent; /* Remove o fundo verde/floresta */
-      border-radius: 0;        /* Remove o formato circular */
+      height: 44px !important; 
+      width: auto !important;    
+      object-fit: contain !important;
+      display: block !important;
+      
+      /* Forçando a remoção do fundo e do círculo */
+      background: transparent !important; 
+      background-color: transparent !important;
+      border-radius: 0 !important; 
+      -webkit-border-radius: 0 !important;
     }
     .tabs{
       display:flex;
