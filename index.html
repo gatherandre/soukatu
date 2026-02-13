@@ -143,18 +143,19 @@
       transform: scale(1.05);
       opacity: 0.9;
     }
-.brand img {
-      height: 44px !important; 
-      width: auto !important;    
+    .brand img {
+      height: 48px !important; /* Aumentei um pouco para dar destaque à marca */
+      width: auto !important;
       object-fit: contain !important;
       display: block !important;
       
-      /* Mata o círculo e o fundo verde de uma vez por todas */
-      background: none !important; 
+      /* Remove o círculo e o fundo que aparecem no seu print */
+      background: transparent !important;
       background-color: transparent !important;
-      border-radius: 0 !important; 
+      border-radius: 0 !important;
       border: none !important;
       box-shadow: none !important;
+      padding: 0 !important;
     }
     .tabs{
       display:flex;
