@@ -132,16 +132,16 @@
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
 
-    /* =========
-       Header (glass)
-    ========= */
-    /* --- AJUSTE DEFINITIVO: LOGO 330px COM HEADER FINO --- */
+/* --- AJUSTE FINAL: LOGO IMPACTANTE E HEADER FINO --- */
     header {
-      height: 80px !important; /* Altura fixa e elegante para o header */
+      height: 80px !important; 
       min-height: 80px !important;
+      background: rgba(242,232,220,0.98) !important; /* Tom Areia KATU */
       display: flex;
       align-items: center;
-      background: rgba(242,232,220,0.95) !important; /* Areia com leve transparência */
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header .nav {
@@ -149,25 +149,31 @@
       align-items: center !important;
       justify-content: space-between !important;
       width: 100% !important;
-      height: 100%;
     }
 
     .brand {
       display: flex !important;
       align-items: center !important;
-      width: 330px !important; /* Sua largura ideal */
+      /* Reduzi levemente a largura para o menu respirar, mas mantive o impacto */
+      width: 280px !important; 
       flex-shrink: 0 !important;
-      z-index: 10;
     }
 
     .brand img {
-      width: 330px !important;
+      width: 100% !important;
       height: auto !important;
-      /* A MÁGICA: Aumenta a imagem sem esticar o header */
-      margin-top: 10px !important; 
-      transform: scale(1.1); 
+      /* O segredo: a margem negativa permite que o logo seja maior que o header */
+      margin: -15px 0 !important; 
+      transform: scale(1.15); 
       transform-origin: left center;
       background: transparent !important;
+    }
+
+    /* Ajuste das abas para não serem "esmagadas" */
+    .tabs {
+      flex: 1 !important;
+      justify-content: center !important;
+      gap: 12px !important;
     }
 
     /* Garante que o menu e botões fiquem alinhados */
