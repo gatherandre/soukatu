@@ -496,13 +496,40 @@
       text-decoration:none;
     }
 
-    /* Responsive */
+/* Responsive */
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
       .mediaRow{ grid-template-columns: 1fr; }
       .grid3{ grid-template-columns: 1fr; }
       .cta{ min-width: auto; }
       .leaf.center{ display:none; }
+    }
+
+    /* Regra Geral para o Logo */
+    .brand img {
+        height: 54px !important;
+        width: auto !important;    
+        object-fit: contain !important;
+        display: block !important;
+        background: transparent !important; 
+        border-radius: 0 !important; 
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Ajuste específico para Telas Pequenas */
+    @media (max-width: 768px) {
+        .brand img {
+            height: 38px !important;
+        }
+        .nav {
+            flex-direction: column;
+            gap: 15px;
+            align-items: center; /* Centraliza o logo e botões no celular */
+        }
+        .tabs {
+            justify-content: center;
+        }
     }
   </style>
 </head>
