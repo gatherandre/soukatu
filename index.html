@@ -127,12 +127,11 @@
       padding: 14px 0;
     }
 
-    /* --- LOGO / HOME BUTTON --- */
+   /* --- LOGO / HOME BUTTON --- */
     .brand {
       display: flex;
       align-items: center;
       justify-content: center;
-      /* Removemos a borda e o fundo para ficar limpo */
       padding: 0;
       background: transparent;
       border: none;
@@ -141,19 +140,17 @@
       transition: transform .15s ease, opacity .15s ease;
     }
     .brand:hover {
-      transform: scale(1.05); /* Efeito suave de zoom ao passar o mouse */
+      transform: scale(1.05);
       opacity: 0.9;
     }
     .brand img {
-      height: 44px; /* Um pouco maior para ser o destaque */
-      width: 44px;
+      height: 44px; 
+      width: auto;    /* Ajusta a largura automaticamente para não achatar o logo */
       object-fit: contain;
       display: block;
-      /* Mantemos o estilo placeholder caso a imagem não carregue, mas circular */
-      background: var(--forest);
-      border-radius: 50%;
+      background: transparent; /* Remove o fundo verde/floresta */
+      border-radius: 0;        /* Remove o formato circular */
     }
-
     .tabs{
       display:flex;
       gap: 8px;
