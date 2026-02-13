@@ -143,17 +143,18 @@
       transform: scale(1.05);
       opacity: 0.9;
     }
-    .brand img {
+.brand img {
       height: 44px !important; 
       width: auto !important;    
       object-fit: contain !important;
       display: block !important;
       
-      /* Forçando a remoção do fundo e do círculo */
-      background: transparent !important; 
+      /* Mata o círculo e o fundo verde de uma vez por todas */
+      background: none !important; 
       background-color: transparent !important;
       border-radius: 0 !important; 
-      -webkit-border-radius: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
     }
     .tabs{
       display:flex;
