@@ -144,31 +144,30 @@
       z-index: 100;
     }
 
+    /* --- ALINHAMENTO FINAL DO LOGO À ESQUERDA --- */
     header .nav {
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
+      justify-content: space-between !important; /* Logo na ponta, botões na outra */
       width: 100% !important;
+      max-width: var(--max); /* Alinha com o conteúdo do site */
+      margin: 0 auto;
     }
 
     .brand {
       display: flex !important;
       align-items: center !important;
-      /* Reduzi levemente a largura para o menu respirar, mas mantive o impacto */
-      width: 280px !important; 
+      justify-content: flex-start !important; /* Garante que comece na borda esquerda */
+      width: auto !important; /* Deixa o container justo ao tamanho da imagem */
       flex-shrink: 0 !important;
     }
 
     .brand img {
-      width: 100% !important;
+      width: 260px !important; /* Tamanho ideal para não atropelar o menu */
       height: auto !important;
-      /* O segredo: a margem negativa permite que o logo seja maior que o header */
-      margin: -15px 0 !important; 
-      transform: scale(1.15); 
-      transform-origin: left center;
+      margin-left: -10px !important; /* Ajuste fino para colar na borda visual */
       background: transparent !important;
     }
-
     /* Ajuste das abas para não serem "esmagadas" */
     .tabs {
       flex: 1 !important;
@@ -607,7 +606,7 @@
     <div class="page is-active" id="page-katu-empresa" data-page="katu-empresa">
       <div class="heroGrid">
         <div>
-          <div class="tag">KATU Empresa • para quem toca o negócio</div>
+          <div class="tag">KATU Empresa • para quem toca o próprio negócio</div>
           <h1>Seu caixa muda todo dia.<br>Seu banco acompanha — com clareza.</h1>
           <p class="lead">
             A KATU Empresa foi feita para micro e pequenas empresas que precisam de simplicidade,
