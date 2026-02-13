@@ -152,37 +152,40 @@
       padding: 14px 0;
     }
 
-  /* --- LOGO / HOME BUTTON (Ajustado) --- */
+    /* --- AJUSTE LOGO GRANDE + HEADER FINO --- */
     header {
-      height: auto !important;
-      min-height: 70px !important; /* Voltando ao tamanho elegante */
+      height: 80px !important; /* Fixamos a altura do cabeçalho para ele ser fino */
+      min-height: 80px !important;
+      display: flex;
+      align-items: center;
     }
 
     header .nav {
+      height: 100% !important;
+      padding: 0 !important;
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
-      padding: 8px 0 !important;
     }
 
     .brand {
       display: flex !important;
       align-items: center !important;
-      text-decoration: none !important;
-      padding: 0 !important;
-      /* Removemos a largura fixa que estava jogando o logo para o lado */
-      width: auto !important; 
+      width: 330px !important; /* Sua largura ideal */
+      height: 100% !important;
       flex-shrink: 0 !important;
+      position: relative !important;
     }
 
     .brand img {
-      /* O segredo: aumentamos a escala sem forçar o container pai */
-      height: 330px !important; 
-      width: auto !important;
-      margin: -20px 0 !important; /* "Anula" o excesso de altura para não esticar o header */
-      object-fit: contain !important;
-      background: transparent !important;
+      width: 330px !important; /* Largura que você escolheu */
+      height: auto !important;
       display: block !important;
+      /* O segredo para não esticar o header: */
+      position: absolute !important; 
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: transparent !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
