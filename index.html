@@ -132,13 +132,19 @@
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
 
-   /* --- ALINHAMENTO FINAL: LOGO À ESQUERDA E CABEÇALHO FINO --- */
+ /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
+    
+    /* 1. Ajuste do fundo e altura do Header */
     header {
-      height: 85px !important; /* Altura fixa elegante */
-      min-height: 85px !important;
-      background: rgba(242, 232, 220, 0.98) !important;
+      height: auto !important;
+      min-height: 90px !important;
+      background: rgba(242, 232, 220, 0.98) !important; /* Areia KATU */
       display: flex;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
     }
 
     header .nav {
@@ -148,31 +154,30 @@
       width: 100% !important;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0 !important;
+      padding: 0 20px !important;
     }
 
+    /* 2. Logo posicionado à esquerda e com tamanho real */
     .brand {
       display: flex !important;
       align-items: center !important;
       justify-content: flex-start !important;
-      width: 260px !important; /* Largura ideal para impacto sem quebrar o menu */
+      width: 280px !important; /* Largura para o logo se destacar */
       flex-shrink: 0 !important;
-      margin-left: -5px !important; /* Cola o logo na margem esquerda */
     }
 
     .brand img {
-      width: 100% !important;
+      width: 260px !important; /* Tamanho visual do logo */
       height: auto !important;
       display: block !important;
       background: transparent !important;
     }
-
-    /* Centraliza as abas no espaço que sobra */
+    /* 3. Centralização das abas */
     .tabs {
       flex: 1 !important;
       display: flex !important;
       justify-content: center !important;
-      gap: 12px !important;
+      gap: 15px !important;
     }
     /* Garante que o menu e botões fiquem alinhados */
     .tabs, .cta {
@@ -901,25 +906,32 @@
       </section>
     </div>
 
-    <footer>
-      <div class="footGrid">
-        <div>
-          <strong style="color:var(--forest); font-family:Manrope, Inter, sans-serif;">KATU</strong>
-          <div>Mockup institucional • soukatu.com.br</div>
+    <footer style="margin-top: 80px; padding: 60px 0; border-top: 1px solid var(--line); color: var(--verde-mata); background: rgba(26,60,52,0.02);">
+    <div class="wrap">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        
+        <div style="flex: 1; min-width: 250px;">
+          <strong style="font-size: 26px; font-family: 'Manrope', sans-serif; font-weight: 800;">KATU</strong>
+          <p style="margin-top: 12px; opacity: 0.8; line-height: 1.6;">
+            Agilidade para quem empreende, clareza para quem investe e humanidade para quem vive.
+          </p>
         </div>
-        <div class="footLinks">
-          <a href="#katu-empresa" data-page="katu-empresa">KATU Empresa</a>
-          <a href="#katu-voce" data-page="katu-voce">KATU Você</a>
-          <a href="#planos" data-page="planos">Planos</a>
-          <a href="#credito" data-page="credito">Crédito</a>
-        </div>
-      </div>
-      <div style="margin-top:12px; opacity:.85;">
-        © <span id="y"></span> • Institucional (pré-lançamento)
-      </div>
-    </footer>
-  </main>
+        
+        <div style="flex: 1; min-width: 300px; font-size: 13px; line-height: 1.8; opacity: 0.9;">
+          <p><strong>KATU INSTITUIÇÃO DE PAGAMENTO LTDA.</strong><br>
+          CNPJ: 00.000.000/0001-00 (Mockup) • Rio de Janeiro, RJ</p>
 
+          
+          <div style="margin-top: 20px; display: flex; gap: 20px;">
+            <span style="opacity: 0.6;">© 2026 KATU • soukatu.com.br</span>
+            <a href="#" style="font-weight: 700; text-decoration: underline;">Privacidade</a>
+            <a href="#" style="font-weight: 700; text-decoration: underline;">Segurança</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
         // ano
