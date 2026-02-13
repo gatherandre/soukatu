@@ -168,14 +168,28 @@
       transform: scale(1.05);
       opacity: 0.9;
     }
+    /* Força o container do logo a crescer */
     .brand {
-      height: 80px !important; /* Força o container a ter a mesma altura da imagem */
+      height: 85px !important;    /* Altura maior para o container */
+      min-width: 180px !important; /* Garante espaço para o nome KATU aparecer */
       display: flex !important;
       align-items: center !important;
+      justify-content: flex-start !important;
     }
 
+    /* Força a imagem a preencher esse espaço */
+    .brand img {
+      height: 100% !important;     /* Faz a imagem usar toda a altura do container */
+      width: auto !important;
+      max-height: 85px !important; /* Limite real do tamanho visual */
+      object-fit: contain !important;
+      transform: scale(1.2);       /* Um leve "zoom" extra para garantir destaque */
+    }
+
+    /* Ajuste do Header para caber o logo novo */
     header .nav {
-      padding: 5px 0 !important; /* Diminui o respiro interno para o logo respirar */
+      padding: 10px 0 !important;
+      min-height: 100px !important; /* Dá altura para o header não espremer o logo */
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
