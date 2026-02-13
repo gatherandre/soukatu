@@ -152,48 +152,37 @@
       padding: 14px 0;
     }
 
-   /* --- LOGO / HOME BUTTON --- */
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      cursor: pointer;
-      transition: transform .15s ease, opacity .15s ease;
-    }
-    /* 1. Forçar o Header a ter altura suficiente */
+  /* --- LOGO / HOME BUTTON (Ajustado) --- */
     header {
       height: auto !important;
-      min-height: 110px !important;
+      min-height: 70px !important; /* Voltando ao tamanho elegante */
     }
 
     header .nav {
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
-      height: 100% !important;
-      padding: 10px 0 !important;
+      padding: 8px 0 !important;
     }
 
-    /* 2. Forçar o link do logo a ocupar o espaço */
     .brand {
       display: flex !important;
-      height: 90px !important; /* Aumentamos um pouco mais */
-      width: 220px !important;  /* Forçamos uma largura mínima para o nome aparecer */
-      flex-shrink: 0 !important; /* Impede que o menu "aperte" o logo */
+      align-items: center !important;
+      text-decoration: none !important;
+      padding: 0 !important;
+      /* Removemos a largura fixa que estava jogando o logo para o lado */
+      width: auto !important; 
+      flex-shrink: 0 !important;
     }
 
-    /* 3. Forçar a imagem a ficar grande */
     .brand img {
-      height: 90px !important;
+      /* O segredo: aumentamos a escala sem forçar o container pai */
+      height: 110px !important; 
       width: auto !important;
-      min-width: 180px !important;
-      max-height: none !important;
+      margin: -20px 0 !important; /* "Anula" o excesso de altura para não esticar o header */
       object-fit: contain !important;
       background: transparent !important;
+      display: block !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
