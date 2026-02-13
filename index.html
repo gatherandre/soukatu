@@ -168,11 +168,15 @@
       transform: scale(1.05);
       opacity: 0.9;
     }
-    .brand img {
-      height: 80px !important; /* Aumentei um pouco para dar destaque à marca */
-      width: auto !important;
-      object-fit: contain !important;
-      display: block !important;
+    .brand {
+      height: 80px !important; /* Força o container a ter a mesma altura da imagem */
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    header .nav {
+      padding: 5px 0 !important; /* Diminui o respiro interno para o logo respirar */
+    }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
       background: transparent !important;
