@@ -132,49 +132,48 @@
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
 
-/* --- AJUSTE FINAL: LOGO IMPACTANTE E HEADER FINO --- */
+   /* --- ALINHAMENTO FINAL: LOGO À ESQUERDA E CABEÇALHO FINO --- */
     header {
-      height: 80px !important; 
-      min-height: 80px !important;
-      background: rgba(242,232,220,0.98) !important; /* Tom Areia KATU */
+      height: 85px !important; /* Altura fixa elegante */
+      min-height: 85px !important;
+      background: rgba(242, 232, 220, 0.98) !important;
       display: flex;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
-    /* --- ALINHAMENTO FINAL DO LOGO À ESQUERDA --- */
     header .nav {
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important; /* Logo na ponta, botões na outra */
+      justify-content: space-between !important;
       width: 100% !important;
-      max-width: var(--max); /* Alinha com o conteúdo do site */
+      max-width: var(--max);
       margin: 0 auto;
+      padding: 0 !important;
     }
 
     .brand {
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important; /* Garante que comece na borda esquerda */
-      width: auto !important; /* Deixa o container justo ao tamanho da imagem */
+      justify-content: flex-start !important;
+      width: 260px !important; /* Largura ideal para impacto sem quebrar o menu */
       flex-shrink: 0 !important;
+      margin-left: -5px !important; /* Cola o logo na margem esquerda */
     }
 
     .brand img {
-      width: 260px !important; /* Tamanho ideal para não atropelar o menu */
+      width: 100% !important;
       height: auto !important;
-      margin-left: -10px !important; /* Ajuste fino para colar na borda visual */
+      display: block !important;
       background: transparent !important;
     }
-    /* Ajuste das abas para não serem "esmagadas" */
+
+    /* Centraliza as abas no espaço que sobra */
     .tabs {
       flex: 1 !important;
+      display: flex !important;
       justify-content: center !important;
       gap: 12px !important;
     }
-
     /* Garante que o menu e botões fiquem alinhados */
     .tabs, .cta {
       display: flex !important;
