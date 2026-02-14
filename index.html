@@ -134,37 +134,44 @@
 
  /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
 
-   /* RESET DO HEADER - FOCO TOTAL NO LOGO */
+  /* FIX DEFINITIVO: LOGO À ESQUERDA E LIMPEZA TOTAL */
     header {
-      height: 100px !important;
-      min-height: 100px !important;
+      height: 90px !important;
       background: #F2E8DC !important;
-      overflow: hidden !important; /* Corta qualquer formato cinza que apareceu */
+      display: flex !important;
+      align-items: center !important;
+      overflow: visible !important; /* Garante que nada estranho apareça */
+      border-bottom: 1px solid rgba(26,60,52,0.1);
     }
 
     header .nav {
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important; /* Tudo começa da esquerda */
-      max-width: 1140px !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      max-width: 1140px !important; /* Alinhamento com o box verde abaixo */
       margin: 0 auto !important;
       padding: 0 22px !important;
     }
 
     .brand {
-      margin-right: 40px !important; /* Dá espaço entre o logo e o menu */
+      display: flex !important;
+      align-items: center !important;
+      flex-shrink: 0 !important;
+      margin: 0 !important;
     }
 
     .brand img {
-      width: 260px !important; /* Tamanho do logo imponente */
-      height: auto !important;
+      height: 60px !important; /* Tamanho imponente e nítido */
+      width: auto !important;
       display: block !important;
     }
 
-    /* Ajuste para o menu não sumir */
+    /* Mantém o menu organizado no espaço que sobra */
     .tabs {
       display: flex !important;
       gap: 15px !important;
+      margin-left: 20px !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
