@@ -134,44 +134,42 @@
 
  /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
 
-  /* FIX DEFINITIVO: LOGO À ESQUERDA E LIMPEZA TOTAL */
+ /* --- LOGO À ESQUERDA E GRANDE (FORCE) --- */
     header {
-      height: 90px !important;
+      height: 100px !important;
       background: #F2E8DC !important;
       display: flex !important;
       align-items: center !important;
-      overflow: visible !important; /* Garante que nada estranho apareça */
-      border-bottom: 1px solid rgba(26,60,52,0.1);
     }
 
     header .nav {
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
+      justify-content: flex-start !important; /* FORÇA O LOGO PARA A ESQUERDA */
       width: 100% !important;
-      max-width: 1140px !important; /* Alinhamento com o box verde abaixo */
+      max-width: 1140px !important; /* ALINHA COM O CONTEÚDO ABAIXO */
       margin: 0 auto !important;
       padding: 0 22px !important;
     }
 
     .brand {
+      margin-right: 40px !important; /* DÁ DISTÂNCIA DO MENU */
       display: flex !important;
       align-items: center !important;
       flex-shrink: 0 !important;
-      margin: 0 !important;
     }
 
     .brand img {
-      height: 60px !important; /* Tamanho imponente e nítido */
+      height: 75px !important; /* LOGO FINALMENTE GRANDE */
       width: auto !important;
       display: block !important;
+      background: transparent !important;
     }
 
-    /* Mantém o menu organizado no espaço que sobra */
+    /* O MENU VEM LOGO EM SEGUIDA */
     .tabs {
       display: flex !important;
       gap: 15px !important;
-      margin-left: 20px !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
