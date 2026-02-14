@@ -68,15 +68,11 @@
       overflow-x: hidden;
     }
 
-    /* Correção para imagens ausentes (placeholder) */
-    img {
+    /* Correção para imagens ausentes (placeholder) - EXCETO O LOGO */
+    img:not(.brand img) {
       background: rgba(0,0,0,0.05);
       color: var(--muted);
       font-size: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
     }
 
     /* =========
@@ -159,13 +155,16 @@
       display: flex !important;
       align-items: center !important;
       flex-shrink: 0 !important;
-      margin-right: 60px !important; /* Espaço generoso entre logo e menu */
+      margin-right: 60px !important;
       min-width: 220px !important;
       max-width: 220px !important;
+      width: 220px !important;
     }
 
-    /* LOGO MAIOR - 220px de largura */
-    .brand img {
+    /* LOGO MAIOR - 220px de largura - FORÇA TOTAL */
+    header .brand img,
+    .brand > img,
+    a.brand img {
       width: 220px !important;
       min-width: 220px !important;
       max-width: 220px !important;
@@ -176,6 +175,7 @@
       border-radius: 0 !important;
       border: none !important;
       box-shadow: none !important;
+      flex: none !important;
     }
 
     /* TABS (menu) vem depois do logo */
