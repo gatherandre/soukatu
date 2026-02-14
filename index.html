@@ -134,17 +134,12 @@
 
  /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
     
-    /* 1. Ajuste do fundo e altura do Header */
+   /* Limpeza total do Header e Logo */
     header {
-      height: auto !important;
-      min-height: 90px !important;
-      background: rgba(242, 232, 220, 0.98) !important; /* Areia KATU */
-      display: flex;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--line);
+      height: 90px !important;
+      display: flex !important;
+      align-items: center !important;
+      background: #F2E8DC !important; /* Cor Areia KATU */
     }
 
     header .nav {
@@ -152,32 +147,29 @@
       align-items: center !important;
       justify-content: space-between !important;
       width: 100% !important;
-      max-width: var(--max);
-      margin: 0 auto;
       padding: 0 20px !important;
     }
 
-    /* 2. Logo posicionado à esquerda e com tamanho real */
     .brand {
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important;
-      width: 280px !important; /* Largura para o logo se destacar */
+      width: 240px !important; /* Largura ideal para não quebrar o menu */
       flex-shrink: 0 !important;
     }
 
     .brand img {
-      width: 260px !important; /* Tamanho visual do logo */
+      width: 220px !important; /* Tamanho do logo ajustado para ficar nítido */
       height: auto !important;
       display: block !important;
       background: transparent !important;
     }
-    /* 3. Centralização das abas */
+
+    /* Garante que o menu fique centralizado no espaço que sobra */
     .tabs {
       flex: 1 !important;
       display: flex !important;
       justify-content: center !important;
-      gap: 15px !important;
+      gap: 10px !important;
     }
     /* Garante que o menu e botões fiquem alinhados */
     .tabs, .cta {
@@ -918,7 +910,7 @@
         </div>
         
         <div style="flex: 1; min-width: 300px; font-size: 13px; line-height: 1.8; opacity: 0.9;">
-          <p><strong>KATU INSTITUIÇÃO DE PAGAMENTO LTDA.</strong><br>
+          <p><strong>BANCO KATU S/A</strong><br>
           CNPJ: 00.000.000/0001-00 (Mockup) • Rio de Janeiro, RJ</p>
 
           
