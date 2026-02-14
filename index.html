@@ -141,44 +141,38 @@
       align-items: center !important;
     }
 
-    header .nav {
+    /* FORÇAR LOGO À ESQUERDA E GRANDE - RESOLUÇÃO FINAL */
+    
+    body header .nav {
       display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      width: 100% !important;
-      max-width: 1140px !important; /* Mesma largura do seu conteúdo principal */
+      justify-content: space-between !important; /* Joga o logo para a ponta esquerda */
+      max-width: 1140px !important; /* Alinha com o conteúdo abaixo */
       margin: 0 auto !important;
-      padding: 0 22px !important; /* Alinhamento exato com o texto abaixo */
+      padding: 0 22px !important;
     }
 
-    .brand {
+    body .brand {
       display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      width: auto !important; /* Deixa o container justo ao logo */
+      justify-content: flex-start !important; /* Garante alinhamento à esquerda */
+      width: 300px !important; /* Espaço reservado para o logo ser grande */
       flex-shrink: 0 !important;
       margin: 0 !important;
-      padding: 0 !important;
     }
 
-    .brand img {
-      height: 65px !important; /* Tamanho do logo imponente, mas sem esticar o header */
-      width: auto !important;
+    body .brand img {
+      width: 280px !important; /* TAMANHO REAL: Aumente este número se quiser maior */
+      height: auto !important;
+      min-width: 280px !important; /* Impede que o menu esprema o logo */
       display: block !important;
       background: transparent !important;
-      object-fit: contain !important;
     }
 
-    /* Empurra as abas para o centro e os botões para a direita */
-    .tabs {
+    /* Empurra o menu central para longe do logo */
+    body .tabs {
       flex: 1 !important;
       display: flex !important;
       justify-content: center !important;
-      gap: 15px !important;
-    }
-    .tabs, .cta {
-      display: flex !important;
-      align-items: center !important;
+      margin-left: 20px !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
