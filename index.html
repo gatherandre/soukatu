@@ -134,45 +134,37 @@
 
  /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
 
+   /* RESET DO HEADER - FOCO TOTAL NO LOGO */
     header {
-      height: 100px !important; /* Altura fixa para o header ser elegante */
+      height: 100px !important;
+      min-height: 100px !important;
       background: #F2E8DC !important;
-      display: flex !important;
-      align-items: center !important;
+      overflow: hidden !important; /* Corta qualquer formato cinza que apareceu */
     }
 
-    /* FORÇAR LOGO À ESQUERDA E GRANDE - RESOLUÇÃO FINAL */
-    
-    body header .nav {
+    header .nav {
       display: flex !important;
-      justify-content: space-between !important; /* Joga o logo para a ponta esquerda */
-      max-width: 1140px !important; /* Alinha com o conteúdo abaixo */
+      align-items: center !important;
+      justify-content: flex-start !important; /* Tudo começa da esquerda */
+      max-width: 1140px !important;
       margin: 0 auto !important;
       padding: 0 22px !important;
     }
 
-    body .brand {
-      display: flex !important;
-      justify-content: flex-start !important; /* Garante alinhamento à esquerda */
-      width: 300px !important; /* Espaço reservado para o logo ser grande */
-      flex-shrink: 0 !important;
-      margin: 0 !important;
+    .brand {
+      margin-right: 40px !important; /* Dá espaço entre o logo e o menu */
     }
 
-    body .brand img {
-      width: 280px !important; /* TAMANHO REAL: Aumente este número se quiser maior */
+    .brand img {
+      width: 260px !important; /* Tamanho do logo imponente */
       height: auto !important;
-      min-width: 280px !important; /* Impede que o menu esprema o logo */
       display: block !important;
-      background: transparent !important;
     }
 
-    /* Empurra o menu central para longe do logo */
-    body .tabs {
-      flex: 1 !important;
+    /* Ajuste para o menu não sumir */
+    .tabs {
       display: flex !important;
-      justify-content: center !important;
-      margin-left: 20px !important;
+      gap: 15px !important;
     }
       
       /* Remove o círculo e o fundo que aparecem no seu print */
