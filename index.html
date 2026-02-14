@@ -109,7 +109,7 @@
     }
 
     /* =========
-       “Folhas” como marca d’água
+       "Folhas" como marca d'água
     ========= */
     .leaf{
       position: fixed;
@@ -132,60 +132,56 @@
     a{ color: inherit; text-decoration: none; }
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 22px; }
 
- /* ========= CABEÇALHO E LOGO (ESTILO) ========= */
+ /* ========= CABEÇALHO E LOGO (ESTILO ATUALIZADO) ========= */
 
- /* --- LOGO À ESQUERDA E GRANDE (FORCE) --- */
     header {
       height: 100px !important;
       background: #F2E8DC !important;
       display: flex !important;
       align-items: center !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 999 !important;
+      border-bottom: 1px solid rgba(26,60,52,0.1) !important;
     }
 
     header .nav {
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important; /* FORÇA O LOGO PARA A ESQUERDA */
+      justify-content: flex-start !important; /* Alinha tudo à esquerda primeiro */
       width: 100% !important;
-      max-width: 1140px !important; /* ALINHA COM O CONTEÚDO ABAIXO */
+      max-width: 1140px !important;
       margin: 0 auto !important;
       padding: 0 22px !important;
     }
 
     .brand {
-      margin-right: 40px !important; /* DÁ DISTÂNCIA DO MENU */
       display: flex !important;
       align-items: center !important;
       flex-shrink: 0 !important;
+      margin-right: 60px !important; /* Espaço generoso entre logo e menu */
     }
 
+    /* LOGO MAIOR - 150px de largura */
     .brand img {
-      height: 75px !important; /* LOGO FINALMENTE GRANDE */
-      width: auto !important;
+      width: 150px !important;
+      height: auto !important;
       display: block !important;
+      object-fit: contain !important;
       background: transparent !important;
-    }
-
-    /* O MENU VEM LOGO EM SEGUIDA */
-    .tabs {
-      display: flex !important;
-      gap: 15px !important;
-    }
-      
-      /* Remove o círculo e o fundo que aparecem no seu print */
-      background: transparent !important;
-      background-color: transparent !important;
       border-radius: 0 !important;
       border: none !important;
       box-shadow: none !important;
-      padding: 0 !important;
     }
-    .tabs{
-      display:flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    /* TABS (menu) vem depois do logo */
+    .tabs {
+      display: flex !important;
+      gap: 15px !important;
+      flex-wrap: wrap !important;
+      margin-right: auto !important; /* Empurra o CTA para a direita */
     }
+      
     .tab{
       font-size: 13px;
       font-weight: 650;
@@ -519,7 +515,7 @@
       text-decoration:none;
     }
 
-/* Responsive */
+    /* Responsive */
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
       .mediaRow{ grid-template-columns: 1fr; }
@@ -528,30 +524,21 @@
       .leaf.center{ display:none; }
     }
 
-    /* Regra Geral para o Logo */
-    .brand img {
-        height: 54px !important;
-        width: auto !important;    
-        object-fit: contain !important;
-        display: block !important;
-        background: transparent !important; 
-        border-radius: 0 !important; 
-        border: none !important;
-        box-shadow: none !important;
-    }
-
     /* Ajuste específico para Telas Pequenas */
     @media (max-width: 768px) {
         .brand img {
-            height: 44px !important;
+            width: 100px !important; /* Logo menor em mobile */
         }
         .nav {
-            flex-direction: column;
-            gap: 15px;
-            align-items: center; /* Centraliza o logo e botões no celular */
+            flex-direction: column !important;
+            gap: 15px !important;
+            align-items: center !important;
         }
         .tabs {
-            justify-content: center;
+            justify-content: center !important;
+        }
+        .brand {
+            margin-right: 0 !important;
         }
     }
   </style>
@@ -564,21 +551,21 @@
   <div class="leaf left" aria-hidden="true"></div>
   <div class="leaf center" aria-hidden="true"></div>
 
-<header style="height: 100px !important; background: #F2E8DC !important; display: flex !important; align-items: center !important; position: sticky !important; top: 0 !important; z-index: 999 !important; border-bottom: 1px solid rgba(26,60,52,0.1) !important;">
-  <div class="nav" style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; max-width: 1140px !important; margin: 0 auto !important; padding: 0 22px !important;">
+<header>
+  <div class="nav">
     
-    <a href="/" class="brand" style="display: flex !important; align-items: center !important; width: 280px !important; flex-shrink: 0 !important;">
-      <img src="https://raw.githubusercontent.com/soukatu/katu/main/logo-katu.png" alt="KATU" style="width: 280px !important; height: auto !important; display: block !important;">
+    <a href="/" class="brand">
+      <img src="https://raw.githubusercontent.com/soukatu/katu/main/logo-katu.png" alt="KATU">
     </a>
 
-    <div class="tabs" style="flex: 1 !important; display: flex !important; justify-content: center !important; gap: 15px !important;">
+    <div class="tabs">
       <a href="#katu-empresa" class="tab">KATU Empresa</a>
       <a href="#katu-voce" class="tab">KATU Você</a>
       <a href="#planos" class="tab">Planos</a>
       <a href="#credito" class="tab">Crédito</a>
     </div>
 
-    <div class="cta" style="display: flex !important; align-items: center !important; gap: 12px !important;">
+    <div class="cta">
       <a href="#" class="btn btn-ghost">Ver planos</a>
       <a href="#" class="btn btn-primary">Baixar o app</a>
     </div>
@@ -726,7 +713,7 @@
       <section id="voce-recursos">
         <h2 class="sectionTitle">O essencial para a vida — do jeito certo.</h2>
         <p class="sectionSub">
-          Uma experiência que parece “viva”: espaço, respiração, clareza e escolhas simples.
+          Uma experiência que parece "viva": espaço, respiração, clareza e escolhas simples.
         </p>
 
         <div class="grid3">
@@ -847,7 +834,7 @@
 
       <section>
         <h2 class="sectionTitle">Como funciona (mockup)</h2>
-        <p class="sectionSub">Três passos, sem “pegadinha”, com linguagem de gente.</p>
+        <p class="sectionSub">Três passos, sem "pegadinha", com linguagem de gente.</p>
 
         <div class="grid3">
           <div class="card">
@@ -872,7 +859,7 @@
             <img src="assets/ecosystem.png" alt="Ecossistema KATU" />
           </div>
           <div class="card">
-            <h3>Você entende o “porquê”</h3>
+            <h3>Você entende o "porquê"</h3>
             <p>
               Se o limite sobe ou desce, você vê o motivo e o que fazer para evoluir.
               Isso reduz ansiedade e melhora o planejamento.
